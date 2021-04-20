@@ -54,22 +54,23 @@ p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 95vw;
+    width: 100vw;
     height: 100%;
+
     text-align: justify;
     background-color: #fafafa;
     border: solid 1px #eaeaea;
-    padding: 0 25px;
 }
 
 .hero__card{
-    width: 100%;
+    width: 300px;
     height: 270px;
     background-color: #fff;
     border: solid 1px #eaeaea;
     border-radius: 10px;
+    padding: 25px;
+    margin: 25px;
     box-shadow: 0 0 25px rgba(0,0,0, 0.05);
-
 }
 
 /*--------------------------------------------------------------
@@ -83,7 +84,9 @@ p{
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
+    .hero__card{
+        width: 480px;
+    }
 }
 
 /* Large devices (portatils petits, 1069px and up) */
