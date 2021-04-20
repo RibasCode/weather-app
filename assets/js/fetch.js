@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const serachCity = document.getElementById('search-city');
 const cardCity = document.getElementById('card__city');
 const cardWeather = document.getElementById('card__weather');
-// const cardTemperature = document.getElementById('card__temperature');
+const cardTemperature = document.getElementById('card__temperature');
 
     serachCity.addEventListener('click', () => {
 
@@ -27,7 +27,7 @@ const cardWeather = document.getElementById('card__weather');
                 console.log(data)
                 cardCity.innerHTML = data.name
                 cardWeather.innerHTML = data.weather[0].main
-                // cardTemperature.innerHTML = data.main.temp
+                cardTemperature.innerHTML = data.main.temp
 
             }catch(error){
                 console.log(error);
