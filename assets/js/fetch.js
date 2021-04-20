@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-const serachCity = document.getElementById('search-city')
+const serachCity = document.getElementById('search-city');
+const cardCity = document.getElementById('card__city');
+// const cardWeather = document.getElementById('card__weather');
+// const cardTemperature = document.getElementById('card__temperature');
 
     serachCity.addEventListener('click', () => {
 
@@ -20,12 +23,18 @@ const serachCity = document.getElementById('search-city')
 
                 const respuesta = await fetch(`${proxy}api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${key}&units=metric`)
                 const data = await respuesta.json()
+                
                 console.log(data)
-        
+                cardCity.innerHTML = data.name
+                // cardWeather.innerHTML = data.weather[0].main
+                // cardTemperature.innerHTML = data.main.temp
+
             }catch(error){
                 console.log(error);
             }
         
+
+
         }
         
         fetchData();
