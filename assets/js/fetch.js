@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-const serachCity = document.getElementById('search-city');
+const citySearch = document.getElementById('city-search');
 const cardCity = document.getElementById('card__city');
 const cardWeather = document.getElementById('card__weather');
 const cardTemperature = document.getElementById('card__temperature');
 
-    serachCity.addEventListener('click', () => {
+    citySearch.addEventListener('click', () => {
 
 
         const fetchData = async () => {
