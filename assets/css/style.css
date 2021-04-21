@@ -14,6 +14,7 @@
 body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+    color: #808080;
 }
 
 /*--------------------------------------------------------------
@@ -73,7 +74,7 @@ p{
     box-shadow: 0 0 25px rgba(0,0,0, 0.05);
 }
 
-.hero__Top{
+.hero__top{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,18 +84,21 @@ p{
 
 #city-input{
     width: 100%;
-    height: 68px;
+    height: 64px;
+    padding: 25px;
+    text-transform: capitalize;
     background-color: #fff;
     border: solid 1px #eaeaea;
+    box-shadow: 0 0 25px rgba(0,0,0, 0.05);
 }
 
 #city-search{
     position: absolute;
-    height: 30px;
-    width: 30px;
+    height: 64px;
+    width: 64px;
     right: 0;
-    margin-right: 20px;
-    background-color: aqua;
+    background-color: #fff;
+    border: solid 1px #eaeaea;
 }
 
 /*--------------------------------------------------------------
@@ -103,15 +107,32 @@ p{
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
     .hero__card{
         width: 480px;
         border-radius: 10px;
     }
+
+    .hero__top{
+        width: auto;
+    }
+
+    #city-input{
+        width: 480px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    #city-search{
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .hero__container{
+        width: 680px;
+    }
+
 }
 
 /* Large devices (portatils petits, 1069px and up) */
