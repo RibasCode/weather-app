@@ -72,6 +72,12 @@ p{
     padding: 25px;
     margin: 25px;
     box-shadow: 0 0 25px rgba(0,0,0, 0.05);
+    user-select: none;
+    transition: box-shadow 0.15s ease-in;
+}
+
+.hero__card:hover{
+    box-shadow: 0 0 25px rgba(0,0,0, 0.10);
 }
 
 .hero__top{
@@ -87,11 +93,14 @@ p{
     height: 64px;
     padding: 25px;
     text-transform: capitalize;
+    font-weight: 700;
+    font-size: 20px;
     background-color: #fff;
     border: solid 1px #eaeaea;
     box-shadow: 0 0 25px rgba(0,0,0, 0.05);
     outline: none;
     transition: border 0.15s ease-in;
+    transition: box-shadow 0.15s ease-in;
 }
 
 #city-search-btn{
@@ -111,15 +120,20 @@ p{
     border: solid 1px #d1d1d1;
 }
 
+#city-search-btn:focus .city-search-svg{
+    fill: #000;
+}
+
 .city-search-svg{
     height: 30px;
     width: 30px;
     fill: #808080;
     transition: fill 0.15s ease-in;
 }
-.city-search-svg:hover{
+#city-search-btn:hover .city-search-svg{
     fill: #000;
 }
+
 
 .card__top{
     height: 50%;
