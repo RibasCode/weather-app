@@ -27,7 +27,7 @@ const cardTemperature = document.getElementById('card__temperature');
                 console.log(data)
                 cardCity.innerHTML = data.name
                 cardWeather.innerHTML = data.weather[0].main
-                cardTemperature.innerHTML = (data.main.temp).toFixed(0)
+                cardTemperature.innerHTML = (data.main.temp).toFixed(0) + 'º'
 
             }catch(error){
                 console.log(error);
