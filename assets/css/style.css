@@ -91,6 +91,7 @@ p{
     border: solid 1px #eaeaea;
     box-shadow: 0 0 25px rgba(0,0,0, 0.05);
     outline: none;
+    transition: border 0.15s ease-in;
 }
 
 #city-search-btn{
@@ -102,6 +103,7 @@ p{
     border: solid 1px #eaeaea;
     cursor: pointer;
     outline: none;
+    transition: border 0.15s ease-in;
 }
 
 #city-input:focus,
