@@ -90,6 +90,7 @@ p{
     background-color: #fff;
     border: solid 1px #eaeaea;
     box-shadow: 0 0 25px rgba(0,0,0, 0.05);
+    outline: none;
 }
 
 #city-search-btn{
@@ -100,6 +101,22 @@ p{
     background-color: #fff;
     border: solid 1px #eaeaea;
     cursor: pointer;
+    outline: none;
+}
+
+#city-input:focus,
+#city-search-btn:focus{
+    border: solid 1px #d1d1d1;
+}
+
+.city-search-svg{
+    height: 30px;
+    width: 30px;
+    fill: #808080;
+    transition: fill 0.15s ease-in;
+}
+.city-search-svg:hover{
+    fill: #000;
 }
 
 /*--------------------------------------------------------------
@@ -127,15 +144,6 @@ p{
         border-radius: 0 10px 10px 0;
     }
 
-    .city-search-svg{
-        height: 30px;
-        width: 30px;
-        fill: #808080;
-        transition: fill 0.15s ease-in;
-    }
-    .city-search-svg:hover{
-        fill: #000;
-    }
 }
 
 /* Medium devices (tablets, 768px and up) */
