@@ -121,6 +121,19 @@ p{
     fill: #000;
 }
 
+.card__top{
+    height: 50%;
+}
+
+.card__bottom{
+    display: flex;
+    height: 50%;
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+}
+
 /*--------------------------------------------------------------
     @media
 --------------------------------------------------------------*/

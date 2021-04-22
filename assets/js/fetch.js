@@ -10,6 +10,9 @@ const citySearchBtn = document.getElementById('city-search-btn');
 const cardCity = document.getElementById('card__city');
 const cardWeather = document.getElementById('card__weather');
 const cardTemperature = document.getElementById('card__temperature');
+const cardMaxTemperature = document.getElementById('card__max-temperature');
+const cardMinTemperature = document.getElementById('card__min-temperature');
+const cardHumidity = document.getElementById('card__humidity');
 
     citySearchBtn.addEventListener('click', () => {
 
@@ -28,6 +31,9 @@ const cardTemperature = document.getElementById('card__temperature');
                 cardCity.innerHTML = data.name
                 cardWeather.innerHTML = data.weather[0].main
                 cardTemperature.innerHTML = (data.main.temp).toFixed(0) + 'º'
+                cardMaxTemperature.innerHTML = (data.main.temp).toFixed(0) + 'º'
+                cardMinTemperature.innerHTML = (data.main.temp).toFixed(0) + 'º'
+                cardHumidity.innerHTML = (data.main.temp).toFixed(0) + '%'
 
             }catch(error){
                 console.log(error);
