@@ -197,6 +197,7 @@ p{
 .card__bottom{
     display: flex;
     height: 25%;
+    margin: 0 25px;
     align-items: flex-end;
 
     justify-content: space-between;
@@ -204,7 +205,7 @@ p{
 }
 
 #card__img{
-    transform: translate(90px, -50px);
+    transform: translate(25px, -25px);
     pointer-events: none;
 }
 
