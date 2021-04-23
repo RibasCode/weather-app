@@ -3,6 +3,12 @@
 :root{
     --clr-primary: #ffffff;
     --clr-primary-hover: #7f7f7f;
+    --clr-typo: #505050;
+    --clr-border: #eaeaea;
+    --clr-outline: #d1d1d1;
+    --clr-black: #000000;
+    --clr-white: #ffffff;
+    --clr-broken-white: #fafafa;
 }
 
 *, *::after, *::before {
@@ -14,7 +20,7 @@
 body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    color: #808080;
+    color: var(--clr-typo);
 }
 
 /*--------------------------------------------------------------
@@ -37,7 +43,7 @@ h3:hover,
 h4:hover,
 h5:hover,
 h6:hover{
-    color: #000;
+    color: var(--clr-black);
 }
 
 h2{
@@ -82,16 +88,16 @@ p{
     height: 100%;
 
     text-align: justify;
-    background-color: #fafafa;
-    border: solid 1px #eaeaea;
+    background-color: var(--clr-broken-white);
+    border: solid 1px var(--clr-border);
 }
 
 .hero__card{
     overflow: hidden;
     width: 100%;
     height: 270px;
-    background-color: #fff;
-    border: solid 1px #eaeaea;
+    background-color: var(--clr-white);
+    border: solid 1px var(--clr-border);
 
     padding: 25px;
     margin: 25px;
@@ -119,9 +125,9 @@ p{
     text-transform: capitalize;
     font-weight: 700;
     font-size: 20px;
-    color: #808080;
-    background-color: #fff;
-    border: solid 1px #eaeaea;
+    color: var(--clr-typo);
+    background-color: var(--clr-white);
+    border: solid 1px var(--clr-border);
     box-shadow: 0 0 25px rgba(0,0,0, 0.05);
     outline: none;
     transition: border 0.15s ease-in;
@@ -133,8 +139,8 @@ p{
     height: 64px;
     width: 64px;
     right: 0;
-    background-color: #fff;
-    border: solid 1px #eaeaea;
+    background-color: var(--clr-white);
+    border: solid 1px var(--clr-border);
     cursor: pointer;
     outline: none;
     transition: border 0.15s ease-in;
@@ -142,22 +148,22 @@ p{
 
 /* #city-input:focus,
 #city-search-btn:focus{
-    border: solid 1px #d1d1d1;
+    border: solid 1px var(--clr-outline);
 }
 
 #city-search-btn:focus .city-search-svg{
-    fill: #000;
+    fill: var(--clr-black);
 } */
 
 .city-search-svg{
     height: 25px;
     width: 25px;
     margin-top: 5px;
-    fill: #808080;
+    fill: var(--clr-typo);
     transition: fill 0.15s ease-in;
 }
 #city-search-btn:hover .city-search-svg{
-    fill: #000;
+    fill: var(--clr-black);
 }
 
 
@@ -176,7 +182,7 @@ p{
 }
 
 #card__temperature{
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .card__top-right{
