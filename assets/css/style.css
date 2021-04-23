@@ -29,6 +29,29 @@ h5,
 h6{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    transition: color 0.15s ease-in;
+}
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover{
+    color: #000;
+}
+
+h2{
+    font-size: 24px;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 64px;
+}
+
+h4{
+    font-weight: 300;
+    font-size: 16px;
 }
 
 p{
@@ -96,6 +119,7 @@ p{
     text-transform: capitalize;
     font-weight: 700;
     font-size: 20px;
+    color: #808080;
     background-color: #fff;
     border: solid 1px #eaeaea;
     box-shadow: 0 0 25px rgba(0,0,0, 0.05);
@@ -149,6 +173,11 @@ p{
     width: 50%;
     height: 100%;
 }
+
+#card__temperature{
+    margin-top: 25px;
+}
+
 .card__top-right{
     position: relative;
     width: 50%;
@@ -169,6 +198,7 @@ p{
 
 #card__img{
     transform: translate(90px, -50px);
+    pointer-events: none;
 }
 
 /*--------------------------------------------------------------
