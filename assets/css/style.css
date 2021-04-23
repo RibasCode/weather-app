@@ -150,8 +150,9 @@ p{
 } */
 
 .city-search-svg{
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
+    margin-top: 5px;
     fill: #808080;
     transition: fill 0.15s ease-in;
 }
