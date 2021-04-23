@@ -136,12 +136,17 @@ p{
 
 
 .card__top{
-    height: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 75%;
 }
 
 .card__bottom{
     display: flex;
-    height: 50%;
+    height: 25%;
     align-items: flex-end;
 
     justify-content: space-between;
