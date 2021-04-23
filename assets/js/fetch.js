@@ -11,6 +11,7 @@ const cardMaxTemperature = document.getElementById('card__max-temperature');
 const cardMinTemperature = document.getElementById('card__min-temperature');
 const cardHumidity = document.getElementById('card__humidity');
 const cardWind = document.getElementById('card__wind');
+const cardImg = document.getElementById('card__img');
 
     citySearchBtn.addEventListener('click', () => {
 
@@ -33,6 +34,12 @@ const cardWind = document.getElementById('card__wind');
                 cardMinTemperature.innerHTML = data.main.temp_min.toFixed(0) + 'º'
                 cardHumidity.innerHTML = data.main.humidity + '%'
                 cardWind.innerHTML = data.wind.speed.toFixed(0) + 'km/h'
+
+                if(data.weather[0].main == 'Clear'){
+                    cardImg.src = 'assets/img/sunny.png'
+                }else{
+                    cardImg.src = ''
+                }
 
             }catch(error){
                 console.log(error);
