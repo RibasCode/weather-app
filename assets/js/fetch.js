@@ -29,16 +29,16 @@ const cardImg = document.getElementById('card__img');
                 console.log(data)
                 cardCity.innerHTML = data.name
                 cardWeather.innerHTML = data.weather[0].main
-                cardTemperature.innerHTML = data.main.temp.toFixed(0) + 'º'
-                cardMaxTemperature.innerHTML = data.main.temp_max.toFixed(0)
+                cardTemperature.innerHTML = data.main.temp.toFixed(0) + '<span style="position: absolute; font-size: 32px;">º</span>'
+                cardMaxTemperature.innerHTML = data.main.temp_max.toFixed(0) + 'º'
                 cardMinTemperature.innerHTML = data.main.temp_min.toFixed(0) + 'º'
                 cardHumidity.innerHTML = data.main.humidity + '%'
                 cardWind.innerHTML = data.wind.speed.toFixed(0) + 'km/h'
 
                 if(data.weather[0].main == 'Clear'){
                     cardImg.src = 'assets/img/sunny.png'
-                }else{
-                    cardImg.src = ''
+                }else if(data.weather[0].main == 'Clouds'){
+                    cardImg.src = 'assets/img/clouds.png'
                 }
 
             }catch(error){

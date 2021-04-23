@@ -140,14 +140,14 @@ p{
     transition: border 0.15s ease-in;
 }
 
-#city-input:focus,
+/* #city-input:focus,
 #city-search-btn:focus{
     border: solid 1px #d1d1d1;
 }
 
 #city-search-btn:focus .city-search-svg{
     fill: #000;
-}
+} */
 
 .city-search-svg{
     height: 30px;
