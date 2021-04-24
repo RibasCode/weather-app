@@ -41,6 +41,7 @@ const cardImg = document.getElementById('card__img');
                     cardImg.src = 'assets/img/clouds.png'
                 }else if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('n')){
                     cardImg.src = 'assets/img/moon.png'
+                    document.documentElement.style.setProperty('--darkColor', '#000');
                 }else if(data.weather[0].main == 'Clouds' && data.weather[0].icon.includes('n')){
                     cardImg.src = ''
                 }
