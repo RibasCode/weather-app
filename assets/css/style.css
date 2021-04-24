@@ -12,19 +12,6 @@
     --clr-shadow: rgba(0,0,0, 0.05);
     --clr-shadow-hover: rgba(0,0,0, 0.10);
    
-
-    /* --clr-primary: #282828;
-    --clr-typo: #fafafa;
-    --clr-border: #404040;
-    --clr-outline: #808080;
-    --clr-black: #ffffff;
-    --clr-white: #282828;
-    --clr-broken-white: #1f1f1f;
-    --clr-broken-black: #fafafa;
-    --clr-shadow: rgba(0,0,0, 0.20);
-    --clr-shadow-hover: rgba(0,0,0, 0.40); */
-
-
     --clr-transition-time: 0.15s;
 }
 
@@ -39,7 +26,12 @@ body{
     font-weight: 300;
     color: var(--clr-typo);
     background-color: var(--clr-white);
+    /* transition: all 0.5 ease-in; */
 }
+
+/* body *{
+    transition: all 0.5 ease-in;
+} */
 
 ::selection {
     color: var(--clr-white);
