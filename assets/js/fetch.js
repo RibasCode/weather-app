@@ -35,10 +35,14 @@ const cardImg = document.getElementById('card__img');
                 cardHumidity.innerHTML = data.main.humidity + '%'
                 cardWind.innerHTML = data.wind.speed.toFixed(0) + 'km/h'
 
-                if(data.weather[0].main == 'Clear'){
+                if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('d')){
                     cardImg.src = 'assets/img/sunny.png'
-                }else if(data.weather[0].main == 'Clouds'){
+                }else if(data.weather[0].main == 'Clouds' && data.weather[0].icon.includes('d')){
                     cardImg.src = 'assets/img/clouds.png'
+                }else if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('n')){
+                    cardImg.src = 'assets/img/moon.png'
+                }else if(data.weather[0].main == 'Clouds' && data.weather[0].icon.includes('n')){
+                    cardImg.src = ''
                 }
 
             }catch(error){
