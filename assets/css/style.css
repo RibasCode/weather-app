@@ -1,7 +1,7 @@
 /* Mobile frist */
 /* Extra small devices (portrait phones, less than 576px) */
 :root{
-    /* --clr-primary: #ffffff;
+    --clr-primary: #ffffff;
     --clr-typo: #1f1f1f;
     --clr-border: #eaeaea;
     --clr-outline: #d1d1d1;
@@ -11,9 +11,9 @@
     --clr-broken-black: #1f1f1f;
     --clr-shadow: rgba(0,0,0, 0.05);
     --clr-shadow-hover: rgba(0,0,0, 0.10);
-    */
+   
 
-    --clr-primary: #282828;
+    /* --clr-primary: #282828;
     --clr-typo: #fafafa;
     --clr-border: #404040;
     --clr-outline: #808080;
@@ -22,7 +22,9 @@
     --clr-broken-white: #1f1f1f;
     --clr-broken-black: #fafafa;
     --clr-shadow: rgba(0,0,0, 0.20);
-    --clr-shadow-hover: rgba(0,0,0, 0.40);
+    --clr-shadow-hover: rgba(0,0,0, 0.40); */
+
+
     --clr-transition-time: 0.15s;
 }
 
