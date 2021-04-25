@@ -12,7 +12,8 @@
     --clr-shadow: rgba(0,0,0, 0.05);
     --clr-shadow-hover: rgba(0,0,0, 0.10);
    
-    --transition-time: 0.18s;
+    --transition-time: 1s;
+    --transition-ease: ease-out;
 }
 
 *, *::after, *::before {
@@ -25,11 +26,11 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     background-color: var(--clr-white);
-    transition: background-color var(--transition-time) ease;
+    transition: background-color var(--transition-time) var(--transition-ease);
 }
 
 body *{
-    transition: all var(--transition-time) ease;
+    transition: background-color var(--transition-time) var(--transition-ease);
 }
 
 ::selection {
@@ -49,7 +50,7 @@ h5,
 h6{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    transition: color var(--transition-time) ease-in;
+    transition: color var(--transition-time) var(--transition-ease);
 }
 
 h1{
@@ -106,6 +107,7 @@ p{
     border: solid 1px var(--clr-border);
     border-top: none;
     border-bottom: none;
+    transition: all var(--transition-time) var(--transition-ease);
 }
 
 .hero__card{
@@ -119,7 +121,7 @@ p{
     margin: 30px 25px;
     box-shadow: 0 0 25px var(--clr-shadow);
     user-select: none;
-    transition: all var(--transition-time) ease-in;
+    transition: all var(--transition-time) var(--transition-ease);
 }
 
 .hero__card:hover{
@@ -132,7 +134,7 @@ p{
     justify-content: center;
     position: relative;
     width: 100%;
-    transition: all var(--transition-time) ease-in;
+    transition: all var(--transition-time) var(--transition-ease);
 }
 
 #city-input{
@@ -147,7 +149,7 @@ p{
     border: solid 1px var(--clr-border);
     box-shadow: 0 0 25px var(--clr-shadow);
     outline: none;
-    transition: all var(--transition-time) ease-in;
+    transition: all var(--transition-time) var(--transition-ease);
 }
 
 #city-search-btn{
@@ -160,7 +162,7 @@ p{
     cursor: pointer;
     outline: none;
     opacity: 1;
-    transition: all var(--transition-time) ease-in;
+    transition: all var(--transition-time) var(--transition-ease);
 }
 
 /* #city-input:focus,
@@ -178,11 +180,11 @@ p{
     margin-top: 5px;
     fill: var(--clr-typo);
     opacity: 1;
-    transition: all var(--transition-time) ease-in;
+    transition: all var(--transition-time) var(--transition-ease);
 }
 #city-search-btn:hover .city-search-svg{
     opacity: 0.6;
-    transition: all var(--transition-time) ease-in;
+    transition: all var(--transition-time) var(--transition-ease);
 }
 
 
