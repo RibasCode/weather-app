@@ -10,7 +10,7 @@
     --clr-broken-white: #fafafa;
     --clr-broken-black: #1f1f1f;
     --clr-shadow: rgba(0,0,0, 0.05);
-    --clr-shadow-hover: rgba(0,0,0, 0.40);
+    --clr-shadow-hover: rgba(0,0,0, 0.10);
    
     --transition-time: 0.18s;
     --transition-ease: ease-out;
@@ -180,7 +180,14 @@ p{
     opacity: 1;
     transition: all var(--transition-time) var(--transition-ease);
 }
-
+.svg{
+    height: 10px;
+    width: 10px;
+    margin-right: 3px;
+}
+.svg:hover{
+    fill: aqua;
+}
 #city-search-btn:hover,
 #city-input:hover{
     border: solid 1px var(--clr-outline);
