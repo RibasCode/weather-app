@@ -2,7 +2,7 @@
 /* Extra small devices (portrait phones, less than 576px) */
 :root{
     --clr-primary: #ffffff;
-    --clr-typo: #1f1f1f;
+    --clr-typo: #282828;
     --clr-border: #eaeaea;
     --clr-outline: #d1d1d1;
     --clr-black: #000000;

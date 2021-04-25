@@ -38,7 +38,7 @@ const cardImg = document.getElementById('card__img');
                 if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('d')){
                     cardImg.src = 'assets/img/sunny.png'
                     document.documentElement.style.setProperty('--clr-primary', '#ffffff');
-                    document.documentElement.style.setProperty('--clr-typo', '#1f1f1f');
+                    document.documentElement.style.setProperty('--clr-typo', '#282828');
                     document.documentElement.style.setProperty('--clr-border', '#eaeaea');
                     document.documentElement.style.setProperty('--clr-outline', '#d1d1d1');
                     document.documentElement.style.setProperty('--clr-black', '#000000');
@@ -50,7 +50,7 @@ const cardImg = document.getElementById('card__img');
                 }else if(data.weather[0].main == 'Clouds' && data.weather[0].icon.includes('d')){
                     cardImg.src = 'assets/img/clouds.png'
                     document.documentElement.style.setProperty('--clr-primary', '#ffffff');
-                    document.documentElement.style.setProperty('--clr-typo', '#1f1f1f');
+                    document.documentElement.style.setProperty('--clr-typo', '#282828');
                     document.documentElement.style.setProperty('--clr-border', '#eaeaea');
                     document.documentElement.style.setProperty('--clr-outline', '#d1d1d1');
                     document.documentElement.style.setProperty('--clr-black', '#000000');
@@ -62,7 +62,7 @@ const cardImg = document.getElementById('card__img');
                 }else if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('n')){
                     cardImg.src = 'assets/img/moon.png'
                     document.documentElement.style.setProperty('--clr-primary', '#282828');
-                    document.documentElement.style.setProperty('--clr-typo', '#fafafa');
+                    document.documentElement.style.setProperty('--clr-typo', '#ffffff');
                     document.documentElement.style.setProperty('--clr-border', '#404040');
                     document.documentElement.style.setProperty('--clr-outline', '#808080');
                     document.documentElement.style.setProperty('--clr-black', '#ffffff');
@@ -74,7 +74,7 @@ const cardImg = document.getElementById('card__img');
                 }else if(data.weather[0].main == 'Clouds' && data.weather[0].icon.includes('n')){
                     cardImg.src = ''
                     document.documentElement.style.setProperty('--clr-primary', '#282828');
-                    document.documentElement.style.setProperty('--clr-typo', '#fafafa');
+                    document.documentElement.style.setProperty('--clr-typo', '#ffffff');
                     document.documentElement.style.setProperty('--clr-border', '#404040');
                     document.documentElement.style.setProperty('--clr-outline', '#808080');
                     document.documentElement.style.setProperty('--clr-black', '#ffffff');
