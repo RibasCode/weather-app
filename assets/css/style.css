@@ -12,7 +12,7 @@
     --clr-shadow: rgba(0,0,0, 0.05);
     --clr-shadow-hover: rgba(0,0,0, 0.10);
    
-    --clr-transition-time: 0.18s;
+    --transition-time: 0.18s;
 }
 
 *, *::after, *::before {
@@ -24,13 +24,12 @@
 body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    color: var(--clr-typo);
     background-color: var(--clr-white);
-    transition: all var(--clr-transition-time) ease;
+    transition: all var(--transition-time) ease;
 }
 
 body *{
-    transition: all var(--clr-transition-time) ease;
+    transition: all var(--transition-time) ease;
 }
 
 ::selection {
@@ -50,26 +49,34 @@ h5,
 h6{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    transition: color var(--clr-transition-time) ease-in;
+    transition: color var(--transition-time) ease-in;
+}
+
+h1{
+    color: var(--clr-broken-black);
 }
 
 h2{
     font-size: 24px;
+    color: var(--clr-typo);
 }
 
 h3{
     font-weight: 400;
     font-size: 64px;
+    color: var(--clr-typo);
 }
 
 h4{
     font-weight: 300;
     font-size: 16px;
+    color: var(--clr-typo);
 }
 
 p{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+    color: var(--clr-typo);
 }
 
 
@@ -108,11 +115,11 @@ p{
     background-color: var(--clr-white);
     border: solid 1px var(--clr-border);
 
-    padding: 25px;
-    margin: 25px;
+    padding: 30px 25px;
+    margin: 30px 25px;
     box-shadow: 0 0 25px var(--clr-shadow);
     user-select: none;
-    transition: box-shadow var(--clr-transition-time) ease-in;
+    transition: box-shadow var(--transition-time) ease-in;
 }
 
 .hero__card:hover{
@@ -139,8 +146,8 @@ p{
     border: solid 1px var(--clr-border);
     box-shadow: 0 0 25px var(--clr-shadow);;
     outline: none;
-    transition: border var(--clr-transition-time) ease-in;
-    transition: box-shadow var(--clr-transition-time) ease-in;
+    transition: border var(--transition-time) ease-in;
+    transition: box-shadow var(--transition-time) ease-in;
 }
 
 #city-search-btn{
@@ -153,7 +160,7 @@ p{
     cursor: pointer;
     outline: none;
     opacity: 1;
-    transition: border var(--clr-transition-time) ease-in;
+    transition: border var(--transition-time) ease-in;
 }
 
 /* #city-input:focus,
@@ -162,7 +169,7 @@ p{
 } */
 
 #city-search-btn:focus .city-search-svg{
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .city-search-svg{
@@ -171,11 +178,12 @@ p{
     margin-top: 5px;
     fill: var(--clr-typo);
     opacity: 1;
-    transition: fill var(--clr-transition-time) ease-in;
+    transition: fill var(--transition-time) ease-in;
+    transition: opacity var(--transition-time) ease-in;
 }
 #city-search-btn:hover .city-search-svg{
-    opacity: 0.8;
-    transition: opacity var(--clr-transition-time) ease-in;
+    opacity: 0.6;
+    transition: opacity var(--transition-time) ease-in;
 }
 
 
