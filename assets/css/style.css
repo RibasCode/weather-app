@@ -25,7 +25,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     background-color: var(--clr-white);
-    transition: all var(--transition-time) ease;
+    transition: background-color var(--transition-time) ease;
 }
 
 body *{
@@ -119,7 +119,7 @@ p{
     margin: 30px 25px;
     box-shadow: 0 0 25px var(--clr-shadow);
     user-select: none;
-    transition: box-shadow var(--transition-time) ease-in;
+    transition: all var(--transition-time) ease-in;
 }
 
 .hero__card:hover{
@@ -146,8 +146,7 @@ p{
     border: solid 1px var(--clr-border);
     box-shadow: 0 0 25px var(--clr-shadow);;
     outline: none;
-    transition: border var(--transition-time) ease-in;
-    transition: box-shadow var(--transition-time) ease-in;
+    transition: all var(--transition-time) ease-in;
 }
 
 #city-search-btn{
@@ -160,7 +159,7 @@ p{
     cursor: pointer;
     outline: none;
     opacity: 1;
-    transition: border var(--transition-time) ease-in;
+    transition: all var(--transition-time) ease-in;
 }
 
 /* #city-input:focus,
@@ -178,12 +177,11 @@ p{
     margin-top: 5px;
     fill: var(--clr-typo);
     opacity: 1;
-    transition: fill var(--transition-time) ease-in;
-    transition: opacity var(--transition-time) ease-in;
+    transition: all var(--transition-time) ease-in;
 }
 #city-search-btn:hover .city-search-svg{
     opacity: 0.6;
-    transition: opacity var(--transition-time) ease-in;
+    transition: all var(--transition-time) ease-in;
 }
 
 
