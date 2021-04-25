@@ -12,7 +12,7 @@
     --clr-shadow: rgba(0,0,0, 0.05);
     --clr-shadow-hover: rgba(0,0,0, 0.10);
    
-    --clr-transition-time: 0.15s;
+    --clr-transition-time: 0.18s;
 }
 
 *, *::after, *::before {
@@ -26,12 +26,12 @@ body{
     font-weight: 300;
     color: var(--clr-typo);
     background-color: var(--clr-white);
-    /* transition: all 0.5 ease-in; */
+    transition: all var(--clr-transition-time) ease;
 }
 
-/* body *{
-    transition: all 0.5 ease-in;
-} */
+body *{
+    transition: all var(--clr-transition-time) ease;
+}
 
 ::selection {
     color: var(--clr-white);
