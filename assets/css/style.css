@@ -132,6 +132,7 @@ p{
     justify-content: center;
     position: relative;
     width: 100%;
+    transition: all var(--transition-time) ease-in;
 }
 
 #city-input{
@@ -144,7 +145,7 @@ p{
     color: var(--clr-typo);
     background-color: var(--clr-white);
     border: solid 1px var(--clr-border);
-    box-shadow: 0 0 25px var(--clr-shadow);;
+    box-shadow: 0 0 25px var(--clr-shadow);
     outline: none;
     transition: all var(--transition-time) ease-in;
 }
@@ -239,7 +240,7 @@ p{
     }
 
     .hero__top{
-        width: auto;
+        width: 480px;
     }
 
     #city-input{
