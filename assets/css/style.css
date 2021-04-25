@@ -116,7 +116,7 @@ p{
     height: 270px;
     background-color: var(--clr-white);
     border: solid 1px var(--clr-border);
-
+    outline: none;
     padding: 30px 25px;
     margin: 30px 25px;
     box-shadow: 0 0 25px var(--clr-shadow);
@@ -124,7 +124,8 @@ p{
     transition: all var(--transition-time) var(--transition-ease);
 }
 
-.hero__card:hover{
+.hero__card:hover,
+.hero__card:focus{
     border: solid 1px var(--clr-outline);
     box-shadow: 0 0 25px var(--clr-shadow-hover);
 }
@@ -185,9 +186,7 @@ p{
     width: 10px;
     margin-right: 3px;
 }
-.svg:hover{
-    fill: aqua;
-}
+
 #city-search-btn:hover,
 #city-input:hover{
     border: solid 1px var(--clr-outline);
