@@ -10,9 +10,9 @@
     --clr-broken-white: #fafafa;
     --clr-broken-black: #1f1f1f;
     --clr-shadow: rgba(0,0,0, 0.05);
-    --clr-shadow-hover: rgba(0,0,0, 0.10);
+    --clr-shadow-hover: rgba(0,0,0, 0.40);
    
-    --transition-time: 1s;
+    --transition-time: 0.18s;
     --transition-ease: ease-out;
 }
 
@@ -125,6 +125,7 @@ p{
 }
 
 .hero__card:hover{
+    border: solid 1px var(--clr-outline);
     box-shadow: 0 0 25px var(--clr-shadow-hover);
 }
 
@@ -165,13 +166,10 @@ p{
     transition: all var(--transition-time) var(--transition-ease);
 }
 
-/* #city-input:focus,
+#city-input:focus,
 #city-search-btn:focus{
     border: solid 1px var(--clr-outline);
-} */
-
-#city-search-btn:focus .city-search-svg{
-    opacity: 0.6;
+    box-shadow: 0 0 25px var(--clr-shadow-hover);
 }
 
 .city-search-svg{
@@ -182,11 +180,13 @@ p{
     opacity: 1;
     transition: all var(--transition-time) var(--transition-ease);
 }
-#city-search-btn:hover .city-search-svg{
-    opacity: 0.6;
+
+#city-search-btn:hover,
+#city-input:hover{
+    border: solid 1px var(--clr-outline);
+    box-shadow: 0 0 25px var(--clr-shadow-hover);
     transition: all var(--transition-time) var(--transition-ease);
 }
-
 
 .card__top{
     text-align: center;
