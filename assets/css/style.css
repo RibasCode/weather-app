@@ -89,12 +89,7 @@ p{
 # Animació inicial
 --------------------------------------------------------------*/
 
-
-.animacio-inicial{
-    z-index: 1001;
-}
-
-.myPortfolioAnimation{
+.title-animation{
     z-index: 1000;
 
     position: fixed;
@@ -103,66 +98,25 @@ p{
     transform: translate(-50%, -50%);
 
     color: var(--whiteColor);
-    font-family: var(--tipyngTitle);
-    font-size: 44px;
-    font-weight: 600;
-
-    opacity: 0;
-    pointer-events: none;
-
-    animation: myPortfolioAnimation cubic-bezier(0.97, 0.01, 0.36, 0.99) 3s;
-}
-
-
-@keyframes myPortfolioAnimation {
-    0%{
-        opacity: 0;
-    }
-    20%{
-        opacity: 1;
-    }
-    60%{
-        opacity: 1;
-    }
-    70%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-
-
-.byRibasCodeAnimation{
-    z-index: 1000;
-
-    position: absolute;
-    top: 75px;
-    left: 295px;
-
-    color: var(--whiteColor);
-    font-family: var(--tipyngTitle);
-    font-size: 14px;
+    font-size: 24px;
     font-weight: 300;
 
     opacity: 0;
+
     pointer-events: none;
 
-    animation: byMarcRibasAnimation cubic-bezier(0.97, 0.01, 0.36, 0.99) 3s;
+    animation: title-animation cubic-bezier(0.97, 0.01, 0.36, 0.99) 4s;
 }
 
 
-@keyframes byMarcRibasAnimation {
+@keyframes title-animation {
     0%{
         opacity: 0;
     }
-    20%{
+    10%{
         opacity: 0;
     }
-    50%{
-        opacity: 1;
-    }
-    60%{
+    30%{
         opacity: 1;
     }
     70%{
@@ -173,7 +127,7 @@ p{
     }
 }
 
-.backgroundAnimation{
+.background-animation{
     z-index: 999;
 
     position: fixed;
@@ -186,17 +140,19 @@ p{
     height: 100vh;
 
     margin: 0 auto;
-    filter: blur(50px);
     background: #fff;
 
     pointer-events: none;
 
-    animation: backgroundAnimation 1s  cubic-bezier(0.97, 0.01, 0.36, 0.99) 2.5s;
+    animation: background-animation 1s  cubic-bezier(0.97, 0.01, 0.36, 0.99) 4s;
     animation-fill-mode: forwards;
 }
 
-@keyframes backgroundAnimation {
+@keyframes background-animation {
     0%{
+        opacity: 1;
+    }
+    10%{
         opacity: 1;
     }
     100%{
@@ -364,6 +320,11 @@ p{
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+    
+    .title-animation{
+        font-size: 36px;
+    }
+
     .hero__card{
         width: 480px;
         border-radius: 10px;
