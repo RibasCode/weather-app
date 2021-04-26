@@ -80,6 +80,11 @@ p{
     color: var(--clr-typo);
 }
 
+.just-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /*--------------------------------------------------------------
     <section> - hero
@@ -182,8 +187,8 @@ p{
     transition: all var(--transition-time) var(--transition-ease);
 }
 .svg{
-    height: 10px;
-    width: 10px;
+    height: 11.5px;
+    width: 11.5px;
     margin-right: 3px;
 }
 
