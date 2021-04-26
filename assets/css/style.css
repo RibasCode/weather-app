@@ -86,6 +86,125 @@ p{
 }
 
 /*--------------------------------------------------------------
+# Animació inicial
+--------------------------------------------------------------*/
+
+
+.animacio-inicial{
+    z-index: 1001;
+}
+
+.myPortfolioAnimation{
+    z-index: 1000;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: var(--whiteColor);
+    font-family: var(--tipyngTitle);
+    font-size: 44px;
+    font-weight: 600;
+
+    opacity: 0;
+    pointer-events: none;
+
+    animation: myPortfolioAnimation cubic-bezier(0.97, 0.01, 0.36, 0.99) 3s;
+}
+
+
+@keyframes myPortfolioAnimation {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+.byRibasCodeAnimation{
+    z-index: 1000;
+
+    position: absolute;
+    top: 75px;
+    left: 295px;
+
+    color: var(--whiteColor);
+    font-family: var(--tipyngTitle);
+    font-size: 14px;
+    font-weight: 300;
+
+    opacity: 0;
+    pointer-events: none;
+
+    animation: byMarcRibasAnimation cubic-bezier(0.97, 0.01, 0.36, 0.99) 3s;
+}
+
+
+@keyframes byMarcRibasAnimation {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.backgroundAnimation{
+    z-index: 999;
+
+    position: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    margin: 0 auto;
+    filter: blur(50px);
+    background: #fff;
+
+    pointer-events: none;
+
+    animation: backgroundAnimation 1s  cubic-bezier(0.97, 0.01, 0.36, 0.99) 2.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes backgroundAnimation {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/*--------------------------------------------------------------
     <section> - hero
 --------------------------------------------------------------*/
 
