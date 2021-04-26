@@ -83,7 +83,6 @@ p{
 .just-center{
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 /*--------------------------------------------------------------
@@ -187,7 +186,7 @@ p{
     transition: all var(--transition-time) var(--transition-ease);
 }
 .svg{
-    height: 11.5px;
+    height: 10px;
     margin-right: 3px;
 }
 
