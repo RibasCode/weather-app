@@ -55,13 +55,13 @@ function printCard(data){
 function showError(data){
     cardInfoHide.style.opacity = 0;
     cardError.style.opacity = 1;
-    cardError.innerHTML = `<p class="hero__error-text">${data.message}</p`
+    cardError.innerHTML = `<h5>Error ${data.cod}</h5><p style="font-size: 14px">${data.message.charAt(0).toUpperCase() + data.message.slice(1)}</p>`
 }
 
 function hideError(){
     cardInfoHide.style.opacity = 1;
     cardError.style.opacity = 0;
-    cardError.innerHTML = `<p class="hero__error-text"></p`
+    cardError.innerHTML = ``
 }
 
     citySearchBtn.addEventListener('click', () => {
