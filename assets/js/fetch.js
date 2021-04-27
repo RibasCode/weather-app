@@ -53,7 +53,7 @@ function darkColor(){
                 const data = await respuesta.json()
                 
                 console.log(data)
-                cardCity.innerHTML = data.name
+                cardCity.innerHTML = data.name + `<span style="position: absolute; font-size: 10px; font-weight: 300; margin-left: 2px;">${data.sys.country}</span>`
                 cardWeather.innerHTML = data.weather[0].main
                 cardTemperature.innerHTML = data.main.temp.toFixed(0) + '<span style="position: absolute; font-size: 32px;">º</span>'
                 cardMaxTemperature.innerHTML = data.main.temp_max.toFixed(0) + 'º'
