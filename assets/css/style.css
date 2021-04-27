@@ -106,7 +106,7 @@ p{
     left: 50%;
     transform: translate(-50%, -50%);
 
-    color: var(--whiteColor);
+    color: var(--clr-typo);
     font-size: 24px;
     font-weight: 300;
 
@@ -149,7 +149,7 @@ p{
     height: 100vh;
 
     margin: 0 auto;
-    background: #fff;
+    background-color: var(--clr-white);
 
     pointer-events: none;
 
@@ -177,7 +177,6 @@ main{
     /* footer effect */
     margin-bottom: 44px;
     background-color: var(--clr-white);
-    box-shadow: 0 0 25px var(--clr-shadow-hover);
 }
 
 /*--------------------------------------------------------------
