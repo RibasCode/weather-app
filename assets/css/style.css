@@ -79,7 +79,7 @@ h3{
 
 h4{
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--clr-typo);
 }
 
@@ -150,8 +150,7 @@ p{
 
     margin: 0 auto;
     background-color: var(--clr-white);
-
-    pointer-events: none;
+    pointer-events: all;
 
     animation: background-animation 1s  cubic-bezier(0.97, 0.01, 0.36, 0.99) 4s;
     animation-fill-mode: forwards;
@@ -160,12 +159,14 @@ p{
 @keyframes background-animation {
     0%{
         opacity: 1;
+        pointer-events: none;
     }
     10%{
         opacity: 1;
     }
     100%{
         opacity: 0;
+        pointer-events: none;
     }
 }
 
