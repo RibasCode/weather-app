@@ -12,6 +12,9 @@ const cardMinTemperature = document.getElementById('card__min-temperature');
 const cardHumidity = document.getElementById('card__humidity');
 const cardWind = document.getElementById('card__wind');
 const cardImg = document.getElementById('card__img');
+const cardInfoHide = document.getElementById('hero__hide');
+const cardError = document.getElementById('hero__error');
+
 
 function ligthColor(){
     document.documentElement.style.setProperty('--clr-primary', '#ffffff');
@@ -39,6 +42,28 @@ function darkColor(){
     document.documentElement.style.setProperty('--clr-shadow-hover', 'rgba(0,0,0, 0.40)');
 }
 
+function printCard(data){
+    cardCity.innerHTML = data.name + `<span style="position: absolute; font-size: 10px; font-weight: 300; margin-left: 2px;">${data.sys.country}</span>`
+    cardWeather.innerHTML = data.weather[0].main
+    cardTemperature.innerHTML = data.main.temp.toFixed(0) + '<span style="position: absolute; font-size: 32px;">º</span>'
+    cardMaxTemperature.innerHTML = data.main.temp_max.toFixed(0) + 'º'
+    cardMinTemperature.innerHTML = data.main.temp_min.toFixed(0) + 'º'
+    cardHumidity.innerHTML = data.main.humidity + '%'
+    cardWind.innerHTML = data.wind.speed.toFixed(0) + 'km/h'
+}
+
+function showError(data){
+    cardInfoHide.style.opacity = 0;
+    cardError.style.opacity = 1;
+    cardError.innerHTML = `<p class="hero__error-text">${data.message}</p`
+}
+
+function hideError(){
+    cardInfoHide.style.opacity = 1;
+    cardError.style.opacity = 0;
+    cardError.innerHTML = `<p class="hero__error-text"></p`
+}
+
     citySearchBtn.addEventListener('click', () => {
 
 
@@ -53,36 +78,48 @@ function darkColor(){
                 const data = await respuesta.json()
                 
                 console.log(data)
-                cardCity.innerHTML = data.name + `<span style="position: absolute; font-size: 10px; font-weight: 300; margin-left: 2px;">${data.sys.country}</span>`
-                cardWeather.innerHTML = data.weather[0].main
-                cardTemperature.innerHTML = data.main.temp.toFixed(0) + '<span style="position: absolute; font-size: 32px;">º</span>'
-                cardMaxTemperature.innerHTML = data.main.temp_max.toFixed(0) + 'º'
-                cardMinTemperature.innerHTML = data.main.temp_min.toFixed(0) + 'º'
-                cardHumidity.innerHTML = data.main.humidity + '%'
-                cardWind.innerHTML = data.wind.speed.toFixed(0) + 'km/h'
 
 
+                if(data.cod == '404' || data.cod == '400'){
+                    showError(data);
 
-                if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('d')){
+                }else if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('d')){
+                    hideError();
                     cardImg.src = 'assets/img/sun.png'
                     ligthColor();
+                    printCard(data);
+                    
                 }else if(data.weather[0].main == 'Clouds' && data.weather[0].icon.includes('d')){
+                    hideError();
                     cardImg.src = 'assets/img/clouds-day.png'
                     ligthColor();
+                    printCard(data);
+
                 }else if(data.weather[0].main == 'Rain' && data.weather[0].icon.includes('d')){
+                    hideError();
                     cardImg.src = ''
                     ligthColor();
+                    printCard(data);
+
                 }else if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('n')){
+                    hideError();
                     cardImg.src = 'assets/img/moon.png'
                     darkColor();
+                    printCard(data);
+
                 }else if(data.weather[0].main == 'Clouds' && data.weather[0].icon.includes('n')){
+                    hideError();
                     cardImg.src = 'assets/img/clouds-night.png'
                     darkColor();
+                    printCard(data);
+
                 }else if(data.weather[0].main == 'Rain' && data.weather[0].icon.includes('n')){
+                    hideError();
                     cardImg.src = ''
                     darkColor();
-                }
+                    printCard(data);
 
+                }
 
                 
             }catch(error){
