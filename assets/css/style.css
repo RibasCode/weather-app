@@ -322,9 +322,7 @@ main{
     height: 25%;
     margin: 0 25px;
     align-items: flex-end;
-
     justify-content: space-between;
-
 }
 
 #card__img{

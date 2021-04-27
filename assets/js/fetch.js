@@ -64,19 +64,19 @@ function darkColor(){
 
 
                 if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('d')){
-                    cardImg.src = 'assets/img/sunny.png'
+                    cardImg.src = 'assets/img/sun.png'
                     ligthColor();
                 }else if(data.weather[0].main == 'Clouds' && data.weather[0].icon.includes('d')){
-                    cardImg.src = 'assets/img/clouds.png'
+                    cardImg.src = 'assets/img/clouds-day.png'
                     ligthColor();
                 }else if(data.weather[0].main == 'Rain' && data.weather[0].icon.includes('d')){
-                    cardImg.src = 'assets/img/clouds.png'
+                    cardImg.src = ''
                     ligthColor();
                 }else if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('n')){
                     cardImg.src = 'assets/img/moon.png'
                     darkColor();
                 }else if(data.weather[0].main == 'Clouds' && data.weather[0].icon.includes('n')){
-                    cardImg.src = ''
+                    cardImg.src = 'assets/img/clouds-night.png'
                     darkColor();
                 }else if(data.weather[0].main == 'Rain' && data.weather[0].icon.includes('n')){
                     cardImg.src = ''
