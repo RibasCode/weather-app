@@ -328,7 +328,8 @@ main{
 }
 
 #card__img{
-    transform: translate(25px, -25px);
+    transform: translate(-18px, 0px);
+    height: 450px;
     pointer-events: none;
 }
 
