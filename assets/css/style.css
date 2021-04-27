@@ -244,26 +244,29 @@ main{
     transition: all var(--transition-time) var(--transition-ease);
 }
 
+#hero__greetings{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 430px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity var(--transition-time) var(--transition-ease);
+}
+
 #hero__error{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
     opacity: 0;
     transition: opacity var(--transition-time) var(--transition-ease);
 }
 
-#hero__error-text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 16px;
-    color: var(--clr-typo);
-    transform: translate(-50%, -50%);
-}
-
 #hero__hide{
-    opacity: 1;
+    opacity: 0;
     width: 100%;
     height: 100%;
     transition: opacity var(--transition-time) var(--transition-ease);
