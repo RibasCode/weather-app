@@ -36,77 +36,94 @@
   
     <body>
 		
+		<!-- -------------------------------------------------------------
+		# Initial Animation
+		-------------------------------------------------------------- -->
+
 		<div>
 			<h1 class="title-animation">What is the weather like today ?</h1>
 			<div class="background-animation"></div>
 		</div>
 
-		<!-- <main id="butter"> -->
-		<main>
+		<!-- -------------------------------------------------------------
+    	<main>
+		-------------------------------------------------------------- -->
+
+		<main> <!-- <main id="butter"> -->
+
+			<!-- -------------------------------------------------------------
+			<section> - hero
+			-------------------------------------------------------------- -->
+
 			<section class="hero">
 				<div class="hero__container">
 
+					<!-- search city -->
 					<div class="hero__top">
 						<input type="text" id="city-input" tabindex="1">
 						<button id="city-search-btn" tabindex="2"><svg class="city-search-svg" viewBox="0 0 79.01 78.81"><path d="M81.37,75.19,60.64,54.46a32.06,32.06,0,1,0-53.4-3.64,30.92,30.92,0,0,0,18,14.7C35.79,68.88,45.46,67,54.43,60.65L75.17,81.39a2,2,0,0,0,2.79,0L81.37,78A2,2,0,0,0,81.37,75.19ZM35.14,59.62a24.6,24.6,0,1,1,24.5-24.5A24.6,24.6,0,0,1,35.14,59.62Z" transform="translate(-3.05 -3.03)"/></svg></button>
 					</div>
 
-					
+					<!-- weather card -->
 					<div class="hero__card" tabindex="3">
 
-					<div id="hero__greetings"></div>
-					<div id="hero__error"></div>
+						<!-- initial greetings message -->
+						<div id="card__greetings"></div>
+						<!-- for errors message -->
+						<div id="card__error"></div>
 
-					<div id="hero__hide">
+						<!-- for hidding the content -->
+						<div id="card__content">
 
-						<div class="card__top">
-							<div class="card__top-left">
-								<div>
-									<h2 id="card__city">City</h2>
-									<h4 id="card__weather">Weather</h4>
+							<div class="card__top">
+								<div class="card__top-left">
+									<div>
+										<h2 id="card__city">City</h2>
+										<h4 id="card__weather">Weather</h4>
+									</div>
+									<h3 id="card__temperature">0<span style="position: absolute; font-size: 32px;">º</span></h3>
 								</div>
-								<h3 id="card__temperature">0<span style="position: absolute; font-size: 32px;">º</span></h3>
+								<div class="card__top-right">
+									<img id="card__img" alt="">
+								</div>
 							</div>
-							<div class="card__top-right">
-								<img id="card__img" alt="">
+
+							<div class="card__bottom">
+								<div class="center-content">
+									<img src="assets/icon/up.svg" class=" svg" alt="Maximum Temperature" title="Maximum Temperature">
+									<h4 id="card__max-temperature">Max</h4>
+								</div>
+
+								<div class="center-content">
+									<img src="assets/icon/down.svg" class=" svg" alt="Minimum Temperature" title="Minimum Temperature">
+									<h4 id="card__min-temperature">Min</h4>
+								</div>
+
+								<div class="center-content">
+									<img src="assets/icon/humidity.svg" class=" svg" alt="Humidity" title="Humidity">
+									<h4 id="card__humidity">Humidity</h4>
+								</div>
+
+								<div class="center-content">
+									<img src="assets/icon/wind.svg" class=" svg" alt="Wind Speed" title="Wind Speed">
+									<h4 id="card__wind">Wind</h4>
+								</div>
 							</div>
 						</div>
-						<div class="card__bottom">
-							
-							<div class="just-center">
-								<img src="assets/icon/up.svg" class=" svg" alt="Maximum Temperature" title="Maximum Temperature">
-								<h4 id="card__max-temperature">Max</h4>
-							</div>
 
-							<div class="just-center">
-								<img src="assets/icon/down.svg" class=" svg" alt="Minimum Temperature" title="Minimum Temperature">
-								<h4 id="card__min-temperature">Min</h4>
-							</div>
-
-							<div class="just-center">
-								<img src="assets/icon/humidity.svg" class=" svg" alt="Humidity" title="Humidity">
-								<h4 id="card__humidity">Humidity</h4>
-							</div>
-
-							<div class="just-center">
-								<img src="assets/icon/wind.svg" class=" svg" alt="Wind Speed" title="Wind Speed">
-								<h4 id="card__wind">Wind</h4>
-							</div>
-
-
-						</div>
-					</div>
 					</div>
 				</div>
 			</section>
 
-			<footer>
-				<p>Marc Ribas</p>
-			</footer>
 		</main>
+
+		<footer>
+			<p>Marc Ribas</p>
+		</footer>
+
 		
 
-		<!-- Main -->
+		<!-- Scripts -->
 		<script src="assets/js/fetch.js"></script>
 
 		<!-- AOS - Animations -->

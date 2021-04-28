@@ -12,9 +12,9 @@ const cardMinTemperature = document.getElementById('card__min-temperature');
 const cardHumidity = document.getElementById('card__humidity');
 const cardWind = document.getElementById('card__wind');
 const cardImg = document.getElementById('card__img');
-const cardInfoHide = document.getElementById('hero__hide');
-const cardGreetings = document.getElementById('hero__greetings');
-const cardError = document.getElementById('hero__error');
+const cardContent = document.getElementById('card__content');
+const cardGreetings = document.getElementById('card__greetings');
+const cardError = document.getElementById('card__error');
 
 
 function ligthColor(){
@@ -55,25 +55,25 @@ function printCard(data){
 
 function showError(data){
     cardGreetings.style.opacity = 0;
-    cardInfoHide.style.opacity = 0;
+    cardContent.style.opacity = 0;
     cardError.style.opacity = 1;
     cardError.innerHTML = `<h5>Error ${data.cod}</h5><p style="font-size: 14px">${data.message.charAt(0).toUpperCase() + data.message.slice(1)}</p>`
 }
 
 function hideError(){
-    cardInfoHide.style.opacity = 1;
+    cardContent.style.opacity = 1;
     cardError.style.opacity = 0;
     cardError.innerHTML = ``
 }
 
 function greetingsMessage(){
-    cardInfoHide.style.opacity = 0;
+    cardContent.style.opacity = 0;
     cardGreetings.style.opacity = 1;
-    cardGreetings.innerHTML = `<p style="font-size: 14px">Witch City would you like to check out?</p>`
+    cardGreetings.innerHTML = `<p style="font-size: 14px">Which city would you like to check?</p>`
 }
 
 function hideGreetingsMessage(){
-    cardInfoHide.style.opacity = 0;
+    cardContent.style.opacity = 0;
     cardGreetings.style.opacity = 1;
     cardGreetings.innerHTML = ``
 }
