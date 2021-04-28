@@ -3,6 +3,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+// --------------------------------------------------------------
+// variable
+// --------------------------------------------------------------
+
 const citySearchBtn = document.getElementById('city-search-btn');
 const cardCity = document.getElementById('card__city');
 const cardWeather = document.getElementById('card__weather');
@@ -16,6 +20,9 @@ const cardContent = document.getElementById('card__content');
 const cardGreetings = document.getElementById('card__greetings');
 const cardError = document.getElementById('card__error');
 
+// --------------------------------------------------------------
+// function
+// --------------------------------------------------------------
 
 function ligthColor(){
     document.documentElement.style.setProperty('--clr-primary', '#ffffff');
@@ -82,6 +89,7 @@ greetingsMessage();
 
     citySearchBtn.addEventListener('click', () => {
 
+        // API request
 
         const fetchData = async () => {
             try{
@@ -95,6 +103,7 @@ greetingsMessage();
                 
                 console.log(data)
 
+                // change card content
 
                 if(data.cod == '404' || data.cod == '400'){
                     showError(data);
