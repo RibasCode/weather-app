@@ -69,7 +69,7 @@ function printCard(data, dataTimeZone){
 
     // palanca = true;
     // mirar si funciona amb la palanca en cada cami de clud rain etc i sino canviar el rellotge de posicio i jugar amb la palanca
-    // mirar amb clgs perque avegades no retecta la palanca
+    // mirar amb clgs perque avegades no detecta la palanca
     function showTime(){
 
         if(palanca == false){
@@ -98,15 +98,14 @@ function printCard(data, dataTimeZone){
         // }
 
 
+
         // h = (h < 10) ? "0" + h : h;
         // m = (m < 10) ? "0" + m : m;
         s = (s < 10) ? "0" + s : s;
 
         // if(h == '0' + h){
-        //     h =  '' + h
-        //     console.log('hola');
+        //     h =  '0' + h
         // }
-        
         // if(m == '0' + m){
         //     m =  '0' + m
         // }

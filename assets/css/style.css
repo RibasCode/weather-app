@@ -73,7 +73,7 @@ h2{
 
 h3{
     font-weight: 400;
-    font-size: 64px;
+    font-size: 60px;
     color: var(--clr-typo);
 }
 
@@ -307,8 +307,8 @@ main{
 }
 
 .city-search-svg{
-    height: 25px;
-    width: 25px;
+    height: 22px;
+    width: 22px;
     margin-top: 5px;
     fill: var(--clr-typo);
     opacity: 1;
@@ -365,7 +365,7 @@ main{
     transform: translate(-18px, 0px);
     height: 450px;
     pointer-events: none;
-    transition: opacity var(--transition-time) var(--transition-ease);
+    transition: all var(--transition-time) var(--transition-ease) !important;
 }
 
 #card__weather{
@@ -374,6 +374,7 @@ main{
 
 #card__time{
     color: var(--clr-typo);
+    transition: all var(--transition-time) var(--transition-ease);
 }
 
 /*--------------------------------------------------------------
