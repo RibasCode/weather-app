@@ -89,6 +89,12 @@ greetingsMessage();
 
     citySearchBtn.addEventListener('click', () => {
 
+        // Transition "Data load" fase1
+
+        cardContent.style.opacity = 0;
+        cardGreetings.style.opacity = 0;
+        cardError.style.opacity = 0;
+
         // API request
 
         const fetchData = async () => {
@@ -103,56 +109,61 @@ greetingsMessage();
                 
                 console.log(data)
 
-                // change card content
+                // Transition "Data load" fase2
 
-                if(data.cod == '404' || data.cod == '400'){
-                    showError(data);
+                setTimeout(function(){
 
-                }else if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('d')){
-                    hideGreetingsMessage();
-                    hideError();
-                    cardImg.src = 'assets/img/sun.png'
-                    ligthColor();
-                    printCard(data);
-                    
-                }else if(data.weather[0].main == 'Clouds' && data.weather[0].icon.includes('d')){
-                    hideGreetingsMessage();
-                    hideError();
-                    cardImg.src = 'assets/img/clouds-day.png'
-                    ligthColor();
-                    printCard(data);
+                    // change card content
 
-                }else if(data.weather[0].main == 'Rain' && data.weather[0].icon.includes('d')){
-                    hideGreetingsMessage();
-                    hideError();
-                    cardImg.src = ''
-                    ligthColor();
-                    printCard(data);
+                    if(data.cod == '404' || data.cod == '400'){
+                        showError(data);
 
-                }else if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('n')){
-                    hideGreetingsMessage();
-                    hideError();
-                    cardImg.src = 'assets/img/moon.png'
-                    darkColor();
-                    printCard(data);
+                    }else if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('d')){
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = 'assets/img/sun.png'
+                        ligthColor();
+                        printCard(data);
+                        
+                    }else if(data.weather[0].main == 'Clouds' && data.weather[0].icon.includes('d')){
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = 'assets/img/clouds-day.png'
+                        ligthColor();
+                        printCard(data);
 
-                }else if(data.weather[0].main == 'Clouds' && data.weather[0].icon.includes('n')){
-                    hideGreetingsMessage();
-                    hideError();
-                    cardImg.src = 'assets/img/clouds-night.png'
-                    darkColor();
-                    printCard(data);
+                    }else if(data.weather[0].main == 'Rain' && data.weather[0].icon.includes('d')){
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = ''
+                        ligthColor();
+                        printCard(data);
 
-                }else if(data.weather[0].main == 'Rain' && data.weather[0].icon.includes('n')){
-                    hideGreetingsMessage();
-                    hideError();
-                    cardImg.src = ''
-                    darkColor();
-                    printCard(data);
+                    }else if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('n')){
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = 'assets/img/moon.png'
+                        darkColor();
+                        printCard(data);
 
-                }
+                    }else if(data.weather[0].main == 'Clouds' && data.weather[0].icon.includes('n')){
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = 'assets/img/clouds-night.png'
+                        darkColor();
+                        printCard(data);
 
-                
+                    }else if(data.weather[0].main == 'Rain' && data.weather[0].icon.includes('n')){
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = ''
+                        darkColor();
+                        printCard(data);
+
+                    }
+
+                }, 500);
+
             }catch(error){
                 console.log(error);
             }
