@@ -39,10 +39,10 @@
 		# initial animation
 		-------------------------------------------------------------- -->
 
-		<div>
+		<!-- <div>
 			<h1 class="title-animation">What is the weather like today ?</h1>
 			<div class="background-animation"></div>
-		</div>
+		</div> -->
 
 		<!-- -------------------------------------------------------------
     	<main>
@@ -78,9 +78,11 @@
 								<div class="card__top-left">
 									<div>
 										<h2 id="card__city">City</h2>
-										<h4 id="card__weather">Weather</h4>
+										<div id="card__generate-clock"></div>
+										<div id="card__time"></div>
 									</div>
 									<h3 id="card__temperature">0<span style="position: absolute; font-size: 32px;">º</span></h3>
+									<h4 id="card__weather">Weather</h4>
 								</div>
 								<div class="card__top-right">
 									<img id="card__img" alt="">
@@ -129,6 +131,7 @@
 		-------------------------------------------------------------- -->
 
 		<script src="assets/js/fetch.js"></script>
+		<!-- <script src="assets/js/fetch-time-zone.js"></script> -->
 
 
   	</body>

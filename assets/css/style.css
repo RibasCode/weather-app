@@ -4,7 +4,7 @@
     --clr-primary: #ffffff;
 
     --clr-typo: #282828;
-    
+
     --clr-border: #eaeaea;
     --clr-outline: #d1d1d1;
     
@@ -50,10 +50,6 @@ body *{
     color: var(--clr-white);
     background-color: var(--clr-typo);
 }
-
-/*--------------------------------------------------------------
-    <main>
---------------------------------------------------------------*/
 
 h1,
 h2,
@@ -345,7 +341,7 @@ main{
 }
 
 #card__temperature{
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .card__top-right{
@@ -369,6 +365,15 @@ main{
     transform: translate(-18px, 0px);
     height: 450px;
     pointer-events: none;
+    transition: opacity var(--transition-time) var(--transition-ease);
+}
+
+#card__weather{
+    margin-top: -8px;
+}
+
+#card__time{
+    color: var(--clr-typo);
 }
 
 /*--------------------------------------------------------------
