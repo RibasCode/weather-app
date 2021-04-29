@@ -1,6 +1,8 @@
 # weather-app
 ## A web app to watch what the weather is like around the world.
-
+- this project uses 2 APIs
+  - https://openweathermap.org/api  - to see the weather in any city
+  - https://timezonedb.com/api      - to see the time Zone in any city
 
 ### mobile frist
 - This project it's done with mobile frist to keep good practices
