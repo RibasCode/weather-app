@@ -177,7 +177,6 @@ greetingsMessage();
     citySearchBtn.addEventListener('click', () => {
 
         // Transition "Data load" fase1
-        cardImg.style.opacity = 0;
         cardContent.style.opacity = 0;
         cardGreetings.style.opacity = 0;
         cardError.style.opacity = 0;
@@ -223,7 +222,6 @@ greetingsMessage();
                         hideGreetingsMessage();
                         hideError();
                         cardImg.src = 'assets/img/sun.png'
-                        cardImg.style.opacity = 1;
                         ligthColor();
                         printCard(data, dataTimeZone);
                         
@@ -232,7 +230,6 @@ greetingsMessage();
                         hideGreetingsMessage();
                         hideError();
                         cardImg.src = 'assets/img/clouds-day.png'
-                        cardImg.style.opacity = 1;
                         ligthColor();
                         printCard(data, dataTimeZone);
 
@@ -241,7 +238,6 @@ greetingsMessage();
                         hideGreetingsMessage();
                         hideError();
                         cardImg.src = ''
-                        cardImg.style.opacity = 1;
                         ligthColor();
                         printCard(data, dataTimeZone);
 
@@ -250,7 +246,6 @@ greetingsMessage();
                         hideGreetingsMessage();
                         hideError();
                         cardImg.src = 'assets/img/moon.png'
-                        cardImg.style.opacity = 1;
                         darkColor();
                         printCard(data, dataTimeZone);
 
@@ -259,7 +254,6 @@ greetingsMessage();
                         hideGreetingsMessage();
                         hideError();
                         cardImg.src = 'assets/img/clouds-night.png'
-                        cardImg.style.opacity = 1;
                         darkColor();
                         printCard(data, dataTimeZone);ç
 
@@ -268,7 +262,6 @@ greetingsMessage();
                         hideGreetingsMessage();
                         hideError();
                         cardImg.src = ''
-                        cardImg.style.opacity = 1;
                         darkColor();
                         printCard(data, dataTimeZone);
 
