@@ -21,6 +21,7 @@ const cardImg = document.getElementById('card__img');
 const cardContent = document.getElementById('card__content');
 const cardGreetings = document.getElementById('card__greetings');
 const cardError = document.getElementById('card__error');
+const heroBot = document.getElementById('hero__bot');
 
 let palanca = true;
 
@@ -55,6 +56,7 @@ function darkColor(){
 }
 
 function printCard(data, dataTimeZone){
+    heroBot.style.opacity = 1;
     cardCity.innerHTML = data.name + `<span style="position: absolute; font-size: 10px; font-weight: 300; margin-left: 2px;">${data.sys.country}</span>`
     cardWeather.innerHTML = data.weather[0].main
     cardTemperature.innerHTML = data.main.temp.toFixed(0) + '<span style="position: absolute; font-size: 32px;">º</span>'
@@ -140,24 +142,32 @@ function printCard(data, dataTimeZone){
 function showError(data){
     cardGreetings.style.opacity = 0;
     cardContent.style.opacity = 0;
+    cardTime.style.opacity = 0;
+    cardDay.style.opacity = 0;
     cardError.style.opacity = 1;
     cardError.innerHTML = `<h5>Error ${data.cod}</h5><p style="font-size: 14px">${data.message.charAt(0).toUpperCase() + data.message.slice(1)}</p>`
 }
 
 function hideError(){
     cardContent.style.opacity = 1;
+    cardTime.style.opacity = 1;
+    cardDay.style.opacity = 1;
     cardError.style.opacity = 0;
     cardError.innerHTML = ``
 }
 
 function greetingsMessage(){
     cardContent.style.opacity = 0;
+    cardTime.style.opacity = 0;
+    cardDay.style.opacity = 0;
     cardGreetings.style.opacity = 1;
     cardGreetings.innerHTML = `<p style="font-size: 14px">Which city around the world would you like to see?</p>`
 }
 
 function hideGreetingsMessage(){
     cardContent.style.opacity = 0;
+    cardTime.style.opacity = 0;
+    cardDay.style.opacity = 0;
     cardGreetings.style.opacity = 1;
     cardGreetings.innerHTML = ``
 }
@@ -167,7 +177,7 @@ greetingsMessage();
     citySearchBtn.addEventListener('click', () => {
 
         // Transition "Data load" fase1
-
+        cardImg.style.opacity = 0;
         cardContent.style.opacity = 0;
         cardGreetings.style.opacity = 0;
         cardError.style.opacity = 0;
@@ -213,6 +223,7 @@ greetingsMessage();
                         hideGreetingsMessage();
                         hideError();
                         cardImg.src = 'assets/img/sun.png'
+                        cardImg.style.opacity = 1;
                         ligthColor();
                         printCard(data, dataTimeZone);
                         
@@ -221,6 +232,7 @@ greetingsMessage();
                         hideGreetingsMessage();
                         hideError();
                         cardImg.src = 'assets/img/clouds-day.png'
+                        cardImg.style.opacity = 1;
                         ligthColor();
                         printCard(data, dataTimeZone);
 
@@ -229,6 +241,7 @@ greetingsMessage();
                         hideGreetingsMessage();
                         hideError();
                         cardImg.src = ''
+                        cardImg.style.opacity = 1;
                         ligthColor();
                         printCard(data, dataTimeZone);
 
@@ -237,6 +250,7 @@ greetingsMessage();
                         hideGreetingsMessage();
                         hideError();
                         cardImg.src = 'assets/img/moon.png'
+                        cardImg.style.opacity = 1;
                         darkColor();
                         printCard(data, dataTimeZone);
 
@@ -245,14 +259,16 @@ greetingsMessage();
                         hideGreetingsMessage();
                         hideError();
                         cardImg.src = 'assets/img/clouds-night.png'
+                        cardImg.style.opacity = 1;
                         darkColor();
-                        printCard(data, dataTimeZone);
+                        printCard(data, dataTimeZone);ç
 
                     }else if(data.weather[0].main == 'Rain' && data.weather[0].icon.includes('n')){
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
                         cardImg.src = ''
+                        cardImg.style.opacity = 1;
                         darkColor();
                         printCard(data, dataTimeZone);
 
