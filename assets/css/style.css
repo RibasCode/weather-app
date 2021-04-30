@@ -184,6 +184,7 @@ main{
     /* footer effect */
     margin-bottom: 44px;
     background-color: var(--clr-white);
+    letter-spacing: 0px;
 }
 
 /*--------------------------------------------------------------
@@ -372,8 +373,10 @@ main{
     margin-top: -8px;
 }
 
-#card__time{
+#card__time,
+#card__day{
     color: var(--clr-typo);
+    font-size: 14px;
     transition: all var(--transition-time) var(--transition-ease);
 }
 

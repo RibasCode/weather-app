@@ -11,6 +11,7 @@ const citySearchBtn = document.getElementById('city-search-btn');
 const cardCity = document.getElementById('card__city');
 const cardWeather = document.getElementById('card__weather');
 const cardTime = document.getElementById('card__time');
+const cardDay = document.getElementById('card__day');
 const cardTemperature = document.getElementById('card__temperature');
 const cardMaxTemperature = document.getElementById('card__max-temperature');
 const cardMinTemperature = document.getElementById('card__min-temperature');
@@ -61,6 +62,14 @@ function printCard(data, dataTimeZone){
     cardMinTemperature.innerHTML = data.main.temp_min.toFixed(0) + 'º'
     cardHumidity.innerHTML = data.main.humidity + '%'
     cardWind.innerHTML = data.wind.speed.toFixed(0) + 'km/h'
+    cardDay.innerHTML = dataTimeZone.formatted.split(" ")[0]
+    let year = dataTimeZone.formatted.split(" ")[0].split(":")[0]
+    let month = dataTimeZone.formatted.split(" ")[0].split(":")[1]
+    let day = dataTimeZone.formatted.split(" ")[0].split(":")[2]
+
+    console.log(year);
+    console.log(month);
+    console.log(day);
 
     // rellotge 
     let s = Number(dataTimeZone.formatted.split(" ")[1].split(":")[2]);
@@ -110,7 +119,7 @@ function printCard(data, dataTimeZone){
         //     m =  '0' + m
         // }
 
-        var time = h + ":" + m + ":" + s;
+        var time = h + " : " + m + " : " + s;
         document.getElementById("card__time").innerText = time;
         document.getElementById("card__time").textContent = time;
 
@@ -173,6 +182,7 @@ greetingsMessage();
                 const data = await respuesta.json()
                 
                 console.log(data)
+
                 if(data.cod == '404' || data.cod == '400'){
                     showError(data);
 
@@ -185,6 +195,8 @@ greetingsMessage();
                 const respuesta2 = await fetch(`https://api.timezonedb.com/v2.1/get-time-zone?key=${key2}&format=json&by=position&lat=${lat}&lng=${lon}`)
                 const dataTimeZone = await respuesta2.json()
                 
+                console.log(dataTimeZone)
+
                 palanca = false;
                 // Transition "Data load" fase2
 
