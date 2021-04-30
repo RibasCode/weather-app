@@ -173,17 +173,18 @@ greetingsMessage();
                 const data = await respuesta.json()
                 
                 console.log(data)
+                if(data.cod == '404' || data.cod == '400'){
+                    showError(data);
 
-                let lat = data.coord.lat;
-                let lng = data.coord.lon;
+                }
+
                 const key2 = `X489P0K0G78W`
-                console.log(lat);
-                console.log(lng);
+                let lat = data.coord.lat
+                let lon = data.coord.lon
 
-                const respuesta2 = await fetch(`https://api.timezonedb.com/v2.1/get-time-zone?key=${key2}&format=json&by=position&lat=${lat}&lng=${lng}`)
+                const respuesta2 = await fetch(`https://api.timezonedb.com/v2.1/get-time-zone?key=${key2}&format=json&by=position&lat=${lat}&lng=${lon}`)
                 const dataTimeZone = await respuesta2.json()
                 
-                console.log(dataTimeZone)
                 palanca = false;
                 // Transition "Data load" fase2
 
@@ -191,10 +192,7 @@ greetingsMessage();
 
                     // change card content
 
-                    if(data.cod == '404' || data.cod == '400'){
-                        showError(data);
-
-                    }else if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('d')){
+                    if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('d')){
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
