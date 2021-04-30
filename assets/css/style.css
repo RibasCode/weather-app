@@ -67,19 +67,20 @@ h1{
 }
 
 h2{
+    font-weight: 500;
     font-size: 24px;
     color: var(--clr-typo);
 }
 
 h3{
-    font-weight: 400;
-    font-size: 60px;
+    font-weight: 300;
+    font-size: 54px;
     color: var(--clr-typo);
 }
 
 h4{
-    font-weight: 300;
     font-size: 14px;
+    font-weight: 300;
     color: var(--clr-typo);
 }
 
@@ -91,13 +92,14 @@ h5{
 
 p{
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     color: var(--clr-typo);
 }
 
 .center-content{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /*--------------------------------------------------------------
@@ -199,6 +201,7 @@ main{
     justify-content: center;
     width: 100%;
     height: 100vh;
+    min-height: 100vh;
 }
 
 .hero__container{
@@ -218,6 +221,8 @@ main{
 }
 
 .hero__card{
+    z-index: 100;
+
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -233,7 +238,9 @@ main{
 }
 
 .hero__card:hover,
-.hero__card:focus{
+.hero__card:focus,
+.hero__bot:hover,
+.hero__bot:focus{
     border: solid 1px var(--clr-outline);
     box-shadow: 0 0 25px var(--clr-shadow-hover);
 }
@@ -280,7 +287,7 @@ main{
     height: 64px;
     padding: 25px;
     text-transform: capitalize;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     color: var(--clr-typo);
     background-color: var(--clr-white);
@@ -396,14 +403,39 @@ main{
 }
 
 #card__weather{
-    margin-top: -8px;
+    font-weight: 300;
+    margin-top: 5px;
 }
 
 #card__time,
 #card__day{
     color: var(--clr-typo);
+
     font-size: 14px;
+    font-weight: 300;
+    margin: 0 20px;
+    margin-top: 2px;
     transition: all var(--transition-time) var(--transition-ease);
+}
+
+.hero__bot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+    padding: 25px;
+    background-color: var(--clr-white);
+    border: solid 1px var(--clr-border);
+    outline: none;
+    box-shadow: 0 0 25px var(--clr-shadow);
+    user-select: none;
+    transition: all var(--transition-time) var(--transition-ease);
+}
+
+.card__footer{
+    width: 50%;
+    text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -450,6 +482,11 @@ footer p{
 
     .hero__top{
         width: 480px;
+    }
+
+    .hero__bot{
+        width: 480px;
+        border-radius: 10px;
     }
 
     #city-input{

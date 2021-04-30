@@ -62,10 +62,14 @@ function printCard(data, dataTimeZone){
     cardMinTemperature.innerHTML = data.main.temp_min.toFixed(0) + 'º'
     cardHumidity.innerHTML = data.main.humidity + '%'
     cardWind.innerHTML = data.wind.speed.toFixed(0) + 'km/h'
-    cardDay.innerHTML = dataTimeZone.formatted.split(" ")[0]
-    let year = dataTimeZone.formatted.split(" ")[0].split(":")[0]
-    let month = dataTimeZone.formatted.split(" ")[0].split(":")[1]
-    let day = dataTimeZone.formatted.split(" ")[0].split(":")[2]
+
+    let year = dataTimeZone.formatted.split(" ")[0].split("-")[0].split("")
+    year = year[2] + year[3];
+
+    let month = dataTimeZone.formatted.split(" ")[0].split("-")[1]
+    let day = dataTimeZone.formatted.split(" ")[0].split("-")[2]
+
+    cardDay.innerHTML = day + " / " + month + " / " + year 
 
     console.log(year);
     console.log(month);
