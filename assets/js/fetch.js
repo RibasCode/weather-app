@@ -140,7 +140,7 @@ function hideError(){
 function greetingsMessage(){
     cardContent.style.opacity = 0;
     cardGreetings.style.opacity = 1;
-    cardGreetings.innerHTML = `<p style="font-size: 14px">Which city would you like to check?</p>`
+    cardGreetings.innerHTML = `<p style="font-size: 14px">Which city around the world would you like to see?</p>`
 }
 
 function hideGreetingsMessage(){
