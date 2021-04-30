@@ -396,6 +396,10 @@ main{
 }
 
 #card__img{
+    /* necesari perque la img respecti el z-index */
+    z-index: -1;
+    position: absolute;
+
     transform: translate(-18px, 0px);
     height: 450px;
     pointer-events: none;
