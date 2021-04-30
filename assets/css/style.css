@@ -158,7 +158,7 @@ p{
     background-color: var(--clr-white);
     pointer-events: all;
 
-    animation: background-animation 1s  cubic-bezier(0.97, 0.01, 0.36, 0.99) 4s;
+    animation: background-animation 1s cubic-bezier(0.97, 0.01, 0.36, 0.99) 4s;
     animation-fill-mode: forwards;
 }
 
@@ -175,6 +175,8 @@ p{
         pointer-events: none;
     }
 }
+
+
 
 /*--------------------------------------------------------------
     <main>
@@ -305,6 +307,30 @@ main{
 #city-search-btn:focus{
     border: solid 1px var(--clr-outline);
     box-shadow: 0 0 25px var(--clr-shadow-hover);
+}
+
+#city-search-btn:hover svg,
+#city-search-btn:focus svg{
+    animation: search-btn-animation 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes search-btn-animation {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
 
 .city-search-svg{
