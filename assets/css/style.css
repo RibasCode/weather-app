@@ -37,7 +37,7 @@ scrollbar-width: none;  /* Firefox */
 }
 
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     transition: background-color var(--transition-time) var(--transition-ease);
 }
@@ -57,7 +57,6 @@ h3,
 h4,
 h5,
 h6{
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     transition: color var(--transition-time) var(--transition-ease);
 }
@@ -414,12 +413,20 @@ main{
 #card__time,
 #card__day{
     color: var(--clr-typo);
-
     font-size: 14px;
     font-weight: 300;
-    margin: 0 20px;
     opacity: 0;
     transition: all var(--transition-time) var(--transition-ease);
+}
+
+#card__time{
+    margin-left: 75px;
+    text-align: left;
+}
+
+#card__day{
+    margin-right: 75px;
+    text-align: right;
 }
 
 #hero__bot{
@@ -508,6 +515,13 @@ footer p{
         height: 450px;
     }
 
+    #card__time{
+        margin-left: 90px;
+    }
+    
+    #card__day{
+        margin-right: 90px;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */

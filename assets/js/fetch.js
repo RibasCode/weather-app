@@ -62,8 +62,8 @@ function printCard(data, dataTimeZone){
     cardTemperature.innerHTML = data.main.temp.toFixed(0) + '<span style="position: absolute; font-size: 32px;">º</span>'
     cardMaxTemperature.innerHTML = data.main.temp_max.toFixed(0) + 'º'
     cardMinTemperature.innerHTML = data.main.temp_min.toFixed(0) + 'º'
-    cardHumidity.innerHTML = data.main.humidity + '%'
-    cardWind.innerHTML = data.wind.speed.toFixed(0) + 'km/h'
+    cardHumidity.innerHTML = data.main.humidity + ' %'
+    cardWind.innerHTML = data.wind.speed.toFixed(0) + `<span style="font-family: 'Open Sans', sans-serif;"> km/h</span>`
 
     let year = dataTimeZone.formatted.split(" ")[0].split("-")[0].split("")
     year = year[2] + year[3];
@@ -71,11 +71,11 @@ function printCard(data, dataTimeZone){
     let month = dataTimeZone.formatted.split(" ")[0].split("-")[1]
     let day = dataTimeZone.formatted.split(" ")[0].split("-")[2]
 
-    cardDay.innerHTML = day + " / " + month + " / " + year 
+    cardDay.innerHTML = day + ` <span style="font-family: 'Open Sans', sans-serif;">/</span> ` + month + ` <span style="font-family: 'Open Sans', sans-serif;">/</span> ` + year 
 
-    console.log(year);
-    console.log(month);
-    console.log(day);
+    // console.log(year);
+    // console.log(month);
+    // console.log(day);
 
     // rellotge 
     let s = Number(dataTimeZone.formatted.split(" ")[1].split(":")[2]);
@@ -177,6 +177,8 @@ greetingsMessage();
     citySearchBtn.addEventListener('click', () => {
 
         // Transition "Data load" fase1
+        cardTime.style.opacity = 0;
+        cardDay.style.opacity = 0;
         cardContent.style.opacity = 0;
         cardGreetings.style.opacity = 0;
         cardError.style.opacity = 0;
@@ -208,7 +210,7 @@ greetingsMessage();
                 const respuesta2 = await fetch(`https://api.timezonedb.com/v2.1/get-time-zone?key=${key2}&format=json&by=position&lat=${lat}&lng=${lon}`)
                 const dataTimeZone = await respuesta2.json()
                 
-                console.log(dataTimeZone)
+                // console.log(dataTimeZone)
 
                 palanca = false;
                 // Transition "Data load" fase2
