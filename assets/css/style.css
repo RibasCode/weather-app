@@ -214,7 +214,6 @@ main{
 
     text-align: justify;
     background-color: var(--clr-broken-white);
-    border: solid 1px var(--clr-border);
     border-top: none;
     border-bottom: none;
     transition: all var(--transition-time) var(--transition-ease);
@@ -517,6 +516,7 @@ footer p{
 
     .hero__container{
         width: 680px;
+        border: solid 1px var(--clr-border);
     }
 
 }
