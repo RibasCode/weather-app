@@ -401,7 +401,7 @@ main{
     
     opacity: 1;
     transform: translate(-18px, 0px);
-    height: 450px;
+    height: 350px;
     pointer-events: none;
     transition: all var(--transition-time) var(--transition-ease) !important;
 }
@@ -503,6 +503,10 @@ footer p{
 
     #city-search-btn{
         border-radius: 0 10px 10px 0;
+    }
+
+    #card__img{
+        height: 450px;
     }
 
 }
