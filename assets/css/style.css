@@ -420,12 +420,12 @@ main{
 }
 
 #card__time{
-    margin-left: 75px;
+    margin-left: 40%;
     text-align: left;
 }
 
 #card__day{
-    margin-right: 75px;
+    margin-right: 40%;
     text-align: right;
 }
 
@@ -513,14 +513,6 @@ footer p{
 
     #card__img{
         height: 450px;
-    }
-
-    #card__time{
-        margin-left: 90px;
-    }
-    
-    #card__day{
-        margin-right: 90px;
     }
 }
 
