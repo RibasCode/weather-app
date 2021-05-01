@@ -243,6 +243,38 @@ greetingsMessage();
                         ligthColor();
                         printCard(data, dataTimeZone);
 
+                    }else if(data.weather[0].main == 'Snow' && data.weather[0].icon.includes('d')){
+                        palanca = true;
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = ''
+                        ligthColor();
+                        printCard(data, dataTimeZone);
+
+                    }else if(data.weather[0].main == 'Drizzle' && data.weather[0].icon.includes('d')){
+                        palanca = true;
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = ''
+                        ligthColor();
+                        printCard(data, dataTimeZone);
+
+                    }else if(data.weather[0].main == 'Mist' && data.weather[0].icon.includes('d')){
+                        palanca = true;
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = ''
+                        ligthColor();
+                        printCard(data, dataTimeZone);
+
+                    }else if(data.weather[0].main == 'Fog' && data.weather[0].icon.includes('d')){
+                        palanca = true;
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = ''
+                        ligthColor();
+                        printCard(data, dataTimeZone);
+
                     }else if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('n')){
                         palanca = true;
                         hideGreetingsMessage();
@@ -260,6 +292,38 @@ greetingsMessage();
                         printCard(data, dataTimeZone);ç
 
                     }else if(data.weather[0].main == 'Rain' && data.weather[0].icon.includes('n')){
+                        palanca = true;
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = ''
+                        darkColor();
+                        printCard(data, dataTimeZone);
+
+                    }else if(data.weather[0].main == 'Snow' && data.weather[0].icon.includes('n')){
+                        palanca = true;
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = ''
+                        darkColor();
+                        printCard(data, dataTimeZone);
+
+                    }else if(data.weather[0].main == 'Drizzle' && data.weather[0].icon.includes('n')){
+                        palanca = true;
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = ''
+                        darkColor();
+                        printCard(data, dataTimeZone);
+
+                    }else if(data.weather[0].main == 'Mist' && data.weather[0].icon.includes('n')){
+                        palanca = true;
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = ''
+                        darkColor();
+                        printCard(data, dataTimeZone);
+
+                    }else if(data.weather[0].main == 'Fog' && data.weather[0].icon.includes('n')){
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
