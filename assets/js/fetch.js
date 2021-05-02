@@ -140,6 +140,7 @@ function printCard(data, dataTimeZone){
 }
 
 function showError(data){
+    heroBot.style.opacity = 0;
     cardGreetings.style.opacity = 0;
     cardContent.style.opacity = 0;
     cardTime.style.opacity = 0;
@@ -149,6 +150,7 @@ function showError(data){
 }
 
 function hideError(){
+    heroBot.style.opacity = 1;
     cardContent.style.opacity = 1;
     cardTime.style.opacity = 1;
     cardDay.style.opacity = 1;
@@ -239,7 +241,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = ''
+                        cardImg.src = 'assets/img/rain.png'
                         ligthColor();
                         printCard(data, dataTimeZone);
 
@@ -289,13 +291,13 @@ greetingsMessage();
                         hideError();
                         cardImg.src = 'assets/img/clouds-night.png'
                         darkColor();
-                        printCard(data, dataTimeZone);ç
+                        printCard(data, dataTimeZone);
 
                     }else if(data.weather[0].main == 'Rain' && data.weather[0].icon.includes('n')){
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = ''
+                        cardImg.src = 'assets/img/rain.png'
                         darkColor();
                         printCard(data, dataTimeZone);
 
