@@ -285,7 +285,7 @@ main{
     height: 64px;
     padding-left: 25px;
     text-transform: capitalize;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 20px;
     color: var(--clr-typo);
     background-color: var(--clr-white);
