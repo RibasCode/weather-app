@@ -260,6 +260,7 @@ main{
     width: 100%;
     width: 100%;
     background-color: var(--clr-black);
+    transition: opacity var(--transition-time) var(--transition-ease);
 }
 #card__greetings-text{
     position: absolute;
@@ -272,17 +273,17 @@ main{
     transition: opacity var(--transition-time) var(--transition-ease);
 }
 
-.map{
+.card__world{
     position: absolute;
     transform: translate(-50%, -50%);
     top: 55%;
     left: -6%;
 
-    animation: map-animation 300s linear infinite;
+    animation: world-animation 300s linear infinite;
     transition: all var(--transition-time) var(--transition-ease);
 }
 
-@keyframes map-animation {
+@keyframes world-animation {
 0%{
 transform: rotate(0deg);
 }
@@ -523,8 +524,8 @@ footer p{
         width: 480px;
     }
 
-    .map{
-        left: 9%;
+    .card__world{
+        left: 8.3%;
     }
 
     #hero__bot{
