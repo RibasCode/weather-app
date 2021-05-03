@@ -265,7 +265,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = ''
+                        cardImg.src = 'assets/img/mist-day.png'
                         ligthColor();
                         printCard(data, dataTimeZone);
 
@@ -273,7 +273,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = ''
+                        cardImg.src = 'assets/img/mist-day.png'
                         ligthColor();
                         printCard(data, dataTimeZone);
 
@@ -321,7 +321,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = ''
+                        cardImg.src = 'assets/img/mist-night.png'
                         darkColor();
                         printCard(data, dataTimeZone);
 
