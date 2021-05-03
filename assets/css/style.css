@@ -278,8 +278,7 @@ main{
     top: 55%;
     left: -6%;
 
-    animation: map-animation 300s infinite;
-    animation-fill-mode: forwards ease;
+    animation: map-animation 300s linear infinite;
     transition: all var(--transition-time) var(--transition-ease);
 }
 
