@@ -19,7 +19,7 @@ const cardHumidity = document.getElementById('card__humidity');
 const cardWind = document.getElementById('card__wind');
 const cardImg = document.getElementById('card__img');
 const cardContent = document.getElementById('card__content');
-const cardGreetings = document.getElementById('card__greetings');
+const cardGreetings = document.getElementById('card__greetings-text');
 const cardError = document.getElementById('card__error');
 const heroBot = document.getElementById('hero__bot');
 
@@ -163,7 +163,7 @@ function greetingsMessage(){
     cardTime.style.opacity = 0;
     cardDay.style.opacity = 0;
     cardGreetings.style.opacity = 1;
-    cardGreetings.innerHTML = `<p style="font-size: 14px">Which city around the world would you like to see?</p>`
+    cardGreetings.innerHTML = `<p style="font-size: 14px; color: var(--clr-white); font-weight: 500; margin-bottom: 25px;">Which city around the world would you like to see?</p>`
 }
 
 function hideGreetingsMessage(){

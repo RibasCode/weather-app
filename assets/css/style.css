@@ -254,6 +254,15 @@ main{
 
 #card__greetings{
     position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    width: 100%;
+    background-color: var(--clr-black);
+}
+#card__greetings-text{
+    position: absolute;
     top: 50%;
     left: 50%;
     width: 430px;
@@ -261,6 +270,26 @@ main{
     text-align: center;
     opacity: 0;
     transition: opacity var(--transition-time) var(--transition-ease);
+}
+
+.map{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 55%;
+    left: -6%;
+
+    animation: map-animation 300s infinite;
+    animation-fill-mode: forwards ease;
+    transition: all var(--transition-time) var(--transition-ease);
+}
+
+@keyframes map-animation {
+0%{
+transform: rotate(0deg);
+}
+100%{
+    transform: rotate(360deg);
+}
 }
 
 #card__error{
@@ -493,6 +522,10 @@ footer p{
 
     .hero__top{
         width: 480px;
+    }
+
+    .map{
+        left: 9%;
     }
 
     #hero__bot{
