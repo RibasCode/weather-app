@@ -262,6 +262,49 @@ main{
     background-color: var(--clr-black);
     transition: opacity var(--transition-time) var(--transition-ease);
 }
+
+
+.card__arrow {
+    z-index: 1;
+
+    position: absolute;
+    top: 17.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 15px 15px 35px 20px;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.arrow__line {
+    display: block;
+    transform: rotate(45deg);
+
+    width: 12.5px;
+    height: 12.5px;
+
+    margin: 0px;
+
+    border-bottom: 2px solid var(--clr-white);
+    border-right: 2px solid var(--clr-white);
+
+    animation: arrow 1.8s infinite ease-in-out;
+}
+
+
+@keyframes arrow {
+    0% {
+        transform: rotate(-135deg) translate(-7.5px, -7.5px);
+    }
+    50% {
+        transform: rotate(-135deg) translate(0px, 0px);
+    }
+    100% {
+        transform: rotate(-135deg) translate(-7.5px, -7.5px);
+    }
+}
+
 #card__greetings-text{
     position: absolute;
     top: 50%;
