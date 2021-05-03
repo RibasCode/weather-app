@@ -1,23 +1,28 @@
 /* Mobile frist */
 /* Extra small devices (portrait phones, less than 576px) */
 :root{
-    --clr-primary: #ffffff;
+    --clr-primary: #282828;
 
-    --clr-typo: #282828;
+    --clr-typo: #ffffff;
 
-    --clr-border: #eaeaea;
-    --clr-outline: #d1d1d1;
+    --clr-border: #404040;
+    --clr-outline: #808080;
     
-    --clr-black: #000000;
-    --clr-white: #ffffff;
-    --clr-broken-white: #fafafa;
-    --clr-broken-black: #1f1f1f;
+    --clr-black: #ffffff;
+    --clr-white: #282828;
+    --clr-broken-white: #1f1f1f;
+    --clr-broken-black: #fafafa;
 
-    --clr-shadow: rgba(0,0,0, 0.05);
-    --clr-shadow-hover: rgba(0,0,0, 0.10);
+    --clr-shadow: rgba(0,0,0, 0.20);
+    --clr-shadow-hover: rgba(0,0,0, 0.40);
    
     --transition-time: 0.25s;
     --transition-ease: ease-out;
+
+    --search-background: #000000;
+    --search-color: #ffffff;
+    --search-border: #404040;
+    --search-outline: #808080;
 }
 
 *, *::after, *::before {
@@ -259,7 +264,7 @@ main{
     height: 100%;
     width: 100%;
     width: 100%;
-    background-color: var(--clr-black);
+    background-color: #000000;
     transition: opacity var(--transition-time) var(--transition-ease);
 }
 
@@ -268,7 +273,7 @@ main{
     z-index: 1;
 
     position: absolute;
-    top: 17.5%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -286,8 +291,8 @@ main{
 
     margin: 0px;
 
-    border-bottom: 2px solid var(--clr-white);
-    border-right: 2px solid var(--clr-white);
+    border-bottom: 2px solid var(--clr-typo);
+    border-right: 2px solid var(--clr-typo);
 
     animation: arrow 1.8s infinite ease-in-out;
 }
@@ -359,9 +364,9 @@ transform: rotate(0deg);
     text-transform: capitalize;
     font-weight: 300;
     font-size: 20px;
-    color: var(--clr-typo);
-    background-color: var(--clr-white);
-    border: solid 1px var(--clr-border);
+    color: var(--search-color);
+    background-color: var(--search-background);
+    border: solid 1px var(--search-border);
     box-shadow: 0 0 25px var(--clr-shadow);
     outline: none;
     transition: all var(--transition-time) var(--transition-ease);
@@ -372,18 +377,27 @@ transform: rotate(0deg);
     height: 64px;
     width: 64px;
     right: 0;
-    background-color: var(--clr-white);
-    border: solid 1px var(--clr-border);
+    background-color: var(--search-background);
+    border: solid 1px var(--search-border);
+    border-left: none;
     cursor: pointer;
     outline: none;
     opacity: 1;
     transition: all var(--transition-time) var(--transition-ease);
 }
 
+
 #city-input:focus,
-#city-search-btn:focus{
-    border: solid 1px var(--clr-outline);
+#city-input:hover,
+#city-search-btn:focus,
+#city-search-btn:hover{
+    border: solid 1px var(--search-outline);
     box-shadow: 0 0 25px var(--clr-shadow-hover);
+}
+
+#city-search-btn:focus,
+#city-search-btn:hover{
+    border-left: none;
 }
 
 #city-search-btn:hover svg,
@@ -414,7 +428,7 @@ transform: rotate(0deg);
     height: 22px;
     width: 22px;
     margin-top: 5px;
-    fill: var(--clr-typo);
+    fill: var(--search-color);
     opacity: 1;
     transition: all var(--transition-time) var(--transition-ease);
 }
@@ -423,11 +437,10 @@ transform: rotate(0deg);
     margin-right: 3px;
 }
 
-#city-search-btn:hover,
-#city-input:hover{
-    border: solid 1px var(--clr-outline);
-    box-shadow: 0 0 25px var(--clr-shadow-hover);
-    transition: all var(--transition-time) var(--transition-ease);
+
+
+#city-search-btn:hover{
+    border-left: none;
 }
 
 .card__top{

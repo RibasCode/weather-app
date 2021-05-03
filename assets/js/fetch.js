@@ -25,7 +25,6 @@ const cardError = document.getElementById('card__error');
 const heroBot = document.getElementById('hero__bot');
 
 let palanca = true;
-let clrSearchCityOncePalanca = true;
 
 // --------------------------------------------------------------
 // function
@@ -39,31 +38,6 @@ input.addEventListener("keyup", function(event) {
   }
 });
 
-function clrSearchCityOnce(){
-
-    document.getElementById('city-input').style.backgroundColor = "#000000";
-    document.getElementById('city-input').style.color = "#ffffff";
-    document.getElementById('city-input').style.border = "#eaeaea";
-    document.getElementById('city-search-btn').style.backgroundColor = "#000000";
-    document.getElementById('city-search-btn').style.border = "#ff0000";
-    document.querySelector('.city-search-svg').style.fill = "#ffffff";
-
-    // asifnar variables just one
-
-    document.documentElement.style.setProperty('--clr-primary', '#ffffff');
-    document.documentElement.style.setProperty('--clr-typo', '#282828');
-    document.documentElement.style.setProperty('--clr-border', '#eaeaea');
-    document.documentElement.style.setProperty('--clr-outline', '#d1d1d1');
-    document.documentElement.style.setProperty('--clr-black', '#000000');
-    document.documentElement.style.setProperty('--clr-white', '#ffffff');
-    document.documentElement.style.setProperty('--clr-broken-white', '#fafafa');
-    document.documentElement.style.setProperty('--clr-broken-black', '#1f1f1f');
-    document.documentElement.style.setProperty('--clr-shadow', 'rgba(0,0,0, 0.05)');
-    document.documentElement.style.setProperty('--clr-shadow-hover', 'rgba(0,0,0, 0.10)');
-}
-
-clrSearchCityOnce()
-
 function ligthColor(){
     document.documentElement.style.setProperty('--clr-primary', '#ffffff');
     document.documentElement.style.setProperty('--clr-typo', '#282828');
@@ -74,7 +48,12 @@ function ligthColor(){
     document.documentElement.style.setProperty('--clr-broken-white', '#fafafa');
     document.documentElement.style.setProperty('--clr-broken-black', '#1f1f1f');
     document.documentElement.style.setProperty('--clr-shadow', 'rgba(0,0,0, 0.05)');
-    document.documentElement.style.setProperty('--clr-shadow-hover', 'rgba(0,0,0, 0.10)');    
+    document.documentElement.style.setProperty('--clr-shadow-hover', 'rgba(0,0,0, 0.10)');
+    
+    document.documentElement.style.setProperty('--search-background', '#ffffff');
+    document.documentElement.style.setProperty('--search-color', '#282828');
+    document.documentElement.style.setProperty('--search-border', '#eaeaea');
+    document.documentElement.style.setProperty('--search-outline', '#d1d1d1');
 }
 
 function darkColor(){
@@ -88,7 +67,15 @@ function darkColor(){
     document.documentElement.style.setProperty('--clr-broken-black', '#fafafa');
     document.documentElement.style.setProperty('--clr-shadow', 'rgba(0,0,0, 0.20)');
     document.documentElement.style.setProperty('--clr-shadow-hover', 'rgba(0,0,0, 0.40)');
+
+    document.documentElement.style.setProperty('--search-background', '#282828');
+    document.documentElement.style.setProperty('--search-color', '#ffffff');
+    document.documentElement.style.setProperty('--search-border', '#404040');
+    document.documentElement.style.setProperty('--search-outline', '#808080');
 }
+
+//inicialitza amb el darkTheme
+
 
 function printCard(data, dataTimeZone){
     heroBot.style.opacity = 1;
@@ -198,7 +185,7 @@ function greetingsMessage(){
     cardTime.style.opacity = 0;
     cardDay.style.opacity = 0;
     cardGreetingsText.style.opacity = 1;
-    cardGreetingsText.innerHTML = `<p style="font-size: 14px; color: var(--clr-white); font-weight: 500; margin-bottom: 25px;">Which city around the world would you like to see?</p>`
+    cardGreetingsText.innerHTML = `<p style="font-size: 14px; color: var(--clr-typo); font-weight: 500; margin-bottom: 25px;">Which city around the world would you like to see?</p>`
 }
 
 function hideGreetingsMessage(){
@@ -250,7 +237,6 @@ greetingsMessage();
                 // console.log(dataTimeZone)
 
                 palanca = false;
-                clrSearchCityOncePalanca = false;
                 // Transition "Data load" fase2
 
                 setTimeout(function(){
