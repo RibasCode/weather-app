@@ -329,7 +329,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = ''
+                        cardImg.src = 'assets/img/mist-night.png'
                         darkColor();
                         printCard(data, dataTimeZone);
 
