@@ -25,10 +25,44 @@ const cardError = document.getElementById('card__error');
 const heroBot = document.getElementById('hero__bot');
 
 let palanca = true;
+let clrSearchCityOncePalanca = true;
 
 // --------------------------------------------------------------
 // function
 // --------------------------------------------------------------
+
+var input = document.getElementById("city-input");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("city-search-btn").click();
+  }
+});
+
+function clrSearchCityOnce(){
+
+    document.getElementById('city-input').style.backgroundColor = "#000000";
+    document.getElementById('city-input').style.color = "#ffffff";
+    document.getElementById('city-input').style.border = "#eaeaea";
+    document.getElementById('city-search-btn').style.backgroundColor = "#000000";
+    document.getElementById('city-search-btn').style.border = "#ff0000";
+    document.querySelector('.city-search-svg').style.fill = "#ffffff";
+
+    // asifnar variables just one
+
+    document.documentElement.style.setProperty('--clr-primary', '#ffffff');
+    document.documentElement.style.setProperty('--clr-typo', '#282828');
+    document.documentElement.style.setProperty('--clr-border', '#eaeaea');
+    document.documentElement.style.setProperty('--clr-outline', '#d1d1d1');
+    document.documentElement.style.setProperty('--clr-black', '#000000');
+    document.documentElement.style.setProperty('--clr-white', '#ffffff');
+    document.documentElement.style.setProperty('--clr-broken-white', '#fafafa');
+    document.documentElement.style.setProperty('--clr-broken-black', '#1f1f1f');
+    document.documentElement.style.setProperty('--clr-shadow', 'rgba(0,0,0, 0.05)');
+    document.documentElement.style.setProperty('--clr-shadow-hover', 'rgba(0,0,0, 0.10)');
+}
+
+clrSearchCityOnce()
 
 function ligthColor(){
     document.documentElement.style.setProperty('--clr-primary', '#ffffff');
@@ -216,6 +250,7 @@ greetingsMessage();
                 // console.log(dataTimeZone)
 
                 palanca = false;
+                clrSearchCityOncePalanca = false;
                 // Transition "Data load" fase2
 
                 setTimeout(function(){
