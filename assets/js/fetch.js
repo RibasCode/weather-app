@@ -257,7 +257,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = ''
+                        cardImg.src = 'assets/img/rain.png'
                         ligthColor();
                         printCard(data, dataTimeZone);
 
@@ -313,7 +313,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = ''
+                        cardImg.src = 'assets/img/rain.png'
                         darkColor();
                         printCard(data, dataTimeZone);
 
