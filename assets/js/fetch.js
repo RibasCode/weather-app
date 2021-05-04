@@ -105,9 +105,6 @@ function printCard(data, dataTimeZone){
     let m = Number(dataTimeZone.formatted.split(" ")[1].split(":")[1]);
     let h = Number(dataTimeZone.formatted.split(" ")[1].split(":")[0]);
 
-    // palanca = true;
-    // mirar si funciona amb la palanca en cada cami de clud rain etc i sino canviar el rellotge de posicio i jugar amb la palanca
-    // mirar amb clgs perque avegades no detecta la palanca
     function showTime(){
 
         if(palanca == false){
@@ -134,8 +131,6 @@ function printCard(data, dataTimeZone){
         //     h = h - 12;
         //     session = "PM";
         // }
-
-
 
         // h = (h < 10) ? "0" + h : h;
         // m = (m < 10) ? "0" + m : m;
@@ -181,13 +176,15 @@ function hideError(){
     cardError.innerHTML = ``
 }
 
-function greetingsMessage(){
-    cardContent.style.opacity = 0;
-    cardTime.style.opacity = 0;
-    cardDay.style.opacity = 0;
-    cardGreetingsText.style.opacity = 1;
-    cardGreetingsText.innerHTML = `<p style="font-size: 14px; color: var(--clr-typo); font-weight: 500; margin-bottom: 25px;">Which city around the world would you like to see?</p>`
-}
+// function greetingsMessage(){
+//     cardContent.style.opacity = 0;
+//     cardTime.style.opacity = 0;
+//     cardDay.style.opacity = 0;
+//     // cardGreetingsText.style.opacity = 1;
+//     // cardGreetingsText.innerHTML = `<p style="font-size: 14px; color: var(--clr-typo); font-weight: 500; margin-bottom: 25px;">Which city around the world would you like to see?</p>`
+// }
+
+// greetingsMessage();
 
 function hideGreetingsMessage(){
     cardContent.style.opacity = 0;
@@ -196,8 +193,6 @@ function hideGreetingsMessage(){
     cardGreetings.style.opacity = 0;
     cardGreetingsText.style.opacity = 0;
 }
-
-greetingsMessage();
 
     citySearchBtn.addEventListener('click', () => {
 
@@ -222,7 +217,7 @@ greetingsMessage();
                 const respuesta = await fetch(`${proxy}api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${key}&units=metric`)
                 const data = await respuesta.json()
                 
-                console.log(data)
+                // console.log(data)
 
                 if(data.cod == '404' || data.cod == '400'){
                     showError(data);
@@ -367,14 +362,9 @@ greetingsMessage();
 
         }
 
-
         fetchData();
 
-
     })
-
-
-
 
 })
 
