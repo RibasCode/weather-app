@@ -223,30 +223,9 @@ main{
     transition: all var(--transition-time) var(--transition-ease);
 }
 
-.hero__card{
-    z-index: 100;
-
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    min-height: 270px;
-    background-color: var(--clr-white);
-    border: solid 1px var(--clr-border);
-    outline: none;
-    padding: 30px 25px;
-    margin: 30px 25px;
-    box-shadow: 0 0 25px var(--clr-shadow);
-    user-select: none;
-    transition: all var(--transition-time) var(--transition-ease);
-}
-
-.hero__card:hover,
-.hero__card:focus,
-#hero__bot:hover,
-#hero__bot:focus{
-    border: solid 1px var(--clr-outline);
-    box-shadow: 0 0 25px var(--clr-shadow-hover);
-}
+/*--------------------------------------------------------------
+    <section> - hero__top
+--------------------------------------------------------------*/
 
 .hero__top{
     display: flex;
@@ -257,105 +236,6 @@ main{
     transition: all var(--transition-time) var(--transition-ease);
 }
 
-#card__greetings{
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    height: 100%;
-    width: 100%;
-    width: 100%;
-    background-color: #000000;
-    transition: opacity var(--transition-time) var(--transition-ease);
-}
-
-
-.card__arrow {
-    z-index: 1;
-
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    padding: 15px 15px 35px 20px;
-
-    transition: all 0.2s ease-in-out;
-}
-
-.arrow__line {
-    display: block;
-    transform: rotate(45deg);
-
-    width: 12.5px;
-    height: 12.5px;
-
-    margin: 0px;
-
-    border-bottom: 2px solid var(--clr-typo);
-    border-right: 2px solid var(--clr-typo);
-
-    animation: arrow 1.8s infinite ease-in-out;
-}
-
-
-@keyframes arrow {
-    0% {
-        transform: rotate(-135deg) translate(-7.5px, -7.5px);
-    }
-    50% {
-        transform: rotate(-135deg) translate(0px, 0px);
-    }
-    100% {
-        transform: rotate(-135deg) translate(-7.5px, -7.5px);
-    }
-}
-
-#card__greetings-text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 430px;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    opacity: 0;
-    transition: opacity var(--transition-time) var(--transition-ease);
-}
-
-.card__world{
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 55%;
-    left: -6%;
-
-    animation: world-animation 300s linear infinite;
-    transition: all var(--transition-time) var(--transition-ease);
-}
-
-@keyframes world-animation {
-0%{
-transform: rotate(0deg);
-}
-100%{
-    transform: rotate(360deg);
-}
-}
-
-#card__error{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    opacity: 0;
-    transition: opacity var(--transition-time) var(--transition-ease);
-}
-
-#card__content{
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity var(--transition-time) var(--transition-ease);
-}
 
 #city-input{
     width: 100%;
@@ -443,6 +323,133 @@ transform: rotate(0deg);
     border-left: none;
 }
 
+/*--------------------------------------------------------------
+    <section> - hero__card
+--------------------------------------------------------------*/
+
+.hero__card{
+    z-index: 100;
+
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 270px;
+    background-color: var(--clr-white);
+    border: solid 1px var(--clr-border);
+    outline: none;
+    padding: 30px 25px;
+    margin: 30px 25px;
+    box-shadow: 0 0 25px var(--clr-shadow);
+    user-select: none;
+    transition: all var(--transition-time) var(--transition-ease);
+}
+
+.hero__card:hover,
+.hero__card:focus,
+#hero__bot:hover,
+#hero__bot:focus{
+    border: solid 1px var(--clr-outline);
+    box-shadow: 0 0 25px var(--clr-shadow-hover);
+}
+
+#card__greetings{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    width: 100%;
+    background-color: #000000;
+    transition: opacity var(--transition-time) var(--transition-ease);
+}
+
+#card__greetings-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 430px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity var(--transition-time) var(--transition-ease);
+}
+
+.card__arrow {
+    z-index: 1;
+
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 15px 15px 35px 20px;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.arrow__line {
+    display: block;
+    transform: rotate(45deg);
+
+    width: 12.5px;
+    height: 12.5px;
+
+    margin: 0px;
+
+    border-bottom: 2px solid var(--clr-typo);
+    border-right: 2px solid var(--clr-typo);
+
+    animation: arrow 1.8s infinite ease-in-out;
+}
+
+@keyframes arrow {
+    0% {
+        transform: rotate(-135deg) translate(-7.5px, -7.5px);
+    }
+    50% {
+        transform: rotate(-135deg) translate(0px, 0px);
+    }
+    100% {
+        transform: rotate(-135deg) translate(-7.5px, -7.5px);
+    }
+}
+
+.card__world{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 55%;
+    left: -6%;
+
+    animation: world-animation 300s linear infinite;
+    transition: all var(--transition-time) var(--transition-ease);
+}
+
+@keyframes world-animation {
+0%{
+transform: rotate(0deg);
+}
+100%{
+    transform: rotate(360deg);
+}
+}
+
+#card__error{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity var(--transition-time) var(--transition-ease);
+}
+
+#card__content{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity var(--transition-time) var(--transition-ease);
+}
+
 .card__top{
     text-align: center;
     display: flex;
@@ -455,6 +462,11 @@ transform: rotate(0deg);
 .card__top-left{
     width: 50%;
     height: 100%;
+}
+
+#card__weather{
+    font-weight: 300;
+    margin-top: 5px;
 }
 
 #card__temperature{
@@ -470,14 +482,6 @@ transform: rotate(0deg);
     justify-content: center;
 }
 
-.card__bottom{
-    display: flex;
-    height: 25%;
-    margin: 0 25px;
-    align-items: flex-end;
-    justify-content: space-between;
-}
-
 #card__img{
     /* necesari perque la img respecti el z-index */
     z-index: -1;
@@ -490,28 +494,12 @@ transform: rotate(0deg);
     transition: all var(--transition-time) var(--transition-ease);
 }
 
-#card__weather{
-    font-weight: 300;
-    margin-top: 5px;
-}
-
-#card__time,
-#card__day{
-    color: var(--clr-typo);
-    font-size: 14px;
-    font-weight: 300;
-    opacity: 0;
-    transition: all var(--transition-time) var(--transition-ease);
-}
-
-#card__time{
-    margin-left: 40%;
-    text-align: left;
-}
-
-#card__day{
-    margin-right: 40%;
-    text-align: right;
+.card__bottom{
+    display: flex;
+    height: 25%;
+    margin: 0 25px;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
 #hero__bot{
@@ -529,9 +517,28 @@ transform: rotate(0deg);
     transition: all var(--transition-time) var(--transition-ease);
 }
 
+#card__time,
+#card__day{
+    color: var(--clr-typo);
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0;
+    transition: all var(--transition-time) var(--transition-ease);
+}
+
 .card__footer{
     width: 50%;
     text-align: center;
+}
+
+#card__time{
+    margin-left: 40%;
+    text-align: left;
+}
+
+#card__day{
+    margin-right: 40%;
+    text-align: right;
 }
 
 /*--------------------------------------------------------------
@@ -571,13 +578,28 @@ footer p{
         font-size: 36px;
     }
 
+    .hero__top{
+        width: 480px;
+    }
+
+    #city-input{
+        width: 480px;
+        border-radius: 10px;
+        text-align: center;
+        padding-left: 0px;
+    }
+    
+    #city-search-btn{
+        border-radius: 0 10px 10px 0;
+    }
+
     .hero__card{
         width: 480px;
         border-radius: 10px;
     }
 
-    .hero__top{
-        width: 480px;
+    #card__img{
+        height: 450px;
     }
 
     .card__world{
@@ -589,20 +611,6 @@ footer p{
         border-radius: 10px;
     }
 
-    #city-input{
-        width: 480px;
-        border-radius: 10px;
-        text-align: center;
-        padding-left: 0px;
-    }
-
-    #city-search-btn{
-        border-radius: 0 10px 10px 0;
-    }
-
-    #card__img{
-        height: 450px;
-    }
 }
 
 /* Medium devices (tablets, 768px and up) */
