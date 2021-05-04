@@ -79,6 +79,8 @@ function darkColor(){
 
 function printCard(data, dataTimeZone){
     heroBot.style.opacity = 1;
+    cardContent.style.opacity = 1;
+    cardImg.style.opacity = 1;
     cardCity.innerHTML = data.name + `<span style="position: absolute; font-size: 10px; font-weight: 300; margin-left: 2px;">${data.sys.country}</span>`
     cardWeather.innerHTML = data.weather[0].main
     cardTemperature.innerHTML = data.main.temp.toFixed(0) + '<span style="position: absolute; font-size: 32px;">º</span>'
@@ -86,7 +88,6 @@ function printCard(data, dataTimeZone){
     cardMinTemperature.innerHTML = data.main.temp_min.toFixed(0) + 'º'
     cardHumidity.innerHTML = data.main.humidity + ' %'
     cardWind.innerHTML = data.wind.speed.toFixed(0) + `<span style="font-family: 'Open Sans', sans-serif;"> km/h</span>`
-
     let year = dataTimeZone.formatted.split(" ")[0].split("-")[0].split("")
     year = year[2] + year[3];
 
@@ -206,6 +207,7 @@ greetingsMessage();
         cardContent.style.opacity = 0;
         cardGreetings.style.opacity = 0;
         cardError.style.opacity = 0;
+        cardImg.style.opacity = 0;
         palanca = false;
 
         // API request
@@ -235,7 +237,7 @@ greetingsMessage();
                 const dataTimeZone = await respuesta2.json()
                 
                 // console.log(dataTimeZone)
-
+                
                 palanca = false;
                 // Transition "Data load" fase2
 
@@ -247,7 +249,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = 'assets/img/sun.png'
+                        cardImg.src = 'assets/img/sun.png';
                         ligthColor();
                         printCard(data, dataTimeZone);
                         
@@ -255,7 +257,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = 'assets/img/clouds-day.png'
+                        cardImg.src = 'assets/img/clouds-day.png';
                         ligthColor();
                         printCard(data, dataTimeZone);
 
@@ -263,7 +265,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = 'assets/img/rain.png'
+                        cardImg.src = 'assets/img/rain.png';
                         ligthColor();
                         printCard(data, dataTimeZone);
 
@@ -271,7 +273,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = 'assets/img/snow.png'
+                        cardImg.src = 'assets/img/snow.png';
                         ligthColor();
                         printCard(data, dataTimeZone);
 
@@ -279,7 +281,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = 'assets/img/rain.png'
+                        cardImg.src = 'assets/img/rain.png';
                         ligthColor();
                         printCard(data, dataTimeZone);
 
@@ -287,7 +289,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = 'assets/img/mist-day.png'
+                        cardImg.src = 'assets/img/mist-day.png';
                         ligthColor();
                         printCard(data, dataTimeZone);
 
@@ -295,7 +297,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = 'assets/img/mist-day.png'
+                        cardImg.src = 'assets/img/mist-day.png';
                         ligthColor();
                         printCard(data, dataTimeZone);
 
@@ -303,7 +305,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = 'assets/img/moon.png'
+                        cardImg.src = 'assets/img/moon.png';
                         darkColor();
                         printCard(data, dataTimeZone);
 
@@ -311,7 +313,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = 'assets/img/clouds-night.png'
+                        cardImg.src = 'assets/img/clouds-night.png';
                         darkColor();
                         printCard(data, dataTimeZone);
 
@@ -319,7 +321,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = 'assets/img/rain.png'
+                        cardImg.src = 'assets/img/rain.png';
                         darkColor();
                         printCard(data, dataTimeZone);
 
@@ -327,7 +329,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = 'assets/img/snow.png'
+                        cardImg.src = 'assets/img/snow.png';
                         darkColor();
                         printCard(data, dataTimeZone);
 
@@ -335,7 +337,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = 'assets/img/rain.png'
+                        cardImg.src = 'assets/img/rain.png';
                         darkColor();
                         printCard(data, dataTimeZone);
 
@@ -343,7 +345,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = 'assets/img/mist-night.png'
+                        cardImg.src = 'assets/img/mist-night.png';
                         darkColor();
                         printCard(data, dataTimeZone);
 
@@ -351,7 +353,7 @@ greetingsMessage();
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();
-                        cardImg.src = 'assets/img/mist-night.png'
+                        cardImg.src = 'assets/img/mist-night.png';
                         darkColor();
                         printCard(data, dataTimeZone);
 

@@ -483,11 +483,11 @@ transform: rotate(0deg);
     z-index: -1;
     position: absolute;
     
-    opacity: 1;
+    opacity: 0;
     transform: translate(-18px, 0px);
     height: 350px;
     pointer-events: none;
-    transition: all var(--transition-time) var(--transition-ease) !important;
+    transition: all var(--transition-time) var(--transition-ease);
 }
 
 #card__weather{
