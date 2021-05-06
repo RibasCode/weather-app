@@ -1,5 +1,6 @@
 'use strict'
 
+document.addEventListener('DOMContentLoaded', () => {
 
 // --------------------------------------------------------------
 // variable
@@ -189,6 +190,8 @@ citySearchBtn.addEventListener('click', () => {
 
     })
 
+})
+
 // --------------------------------------------------------------
 // function
 // --------------------------------------------------------------
@@ -315,16 +318,4 @@ function hideGreetingsMessage(){
 }
 
 
-
-
-
-
-
-
-
-
-    })
-
-
-
-
+})
