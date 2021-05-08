@@ -60,7 +60,7 @@ citySearchBtn.addEventListener('click', () => {
 
         if(dataWeather.cod == '404' || dataWeather.cod == '400'){
             card.showError(dataWeather);
-
+            return
         }
 
         fetchRequest.getDataTimezone(dataWeather).then((dataTimeZone) => {
@@ -69,105 +69,79 @@ citySearchBtn.addEventListener('click', () => {
 
             setTimeout(function(){
 
+                card.hideGreetingsMessage();
+                card.hideError();
                 palanca = true;
 
                 // change card content depending on weather
                 if(dataWeather.weather[0].main == 'Clear' && dataWeather.weather[0].icon.includes('d')){
-                    card.hideGreetingsMessage();
-                    card.hideError();
-                    cardImg.src = 'assets/img/sun.png';
                     card.ligthColor();
+                    cardImg.src = 'assets/img/sun.png';
                     card.cardInfo(dataWeather, dataTimeZone);
                     
                 }else if(dataWeather.weather[0].main == 'Clouds' && dataWeather.weather[0].icon.includes('d')){
-                    card.hideGreetingsMessage();
-                    card.hideError();
-                    cardImg.src = 'assets/img/clouds-day.png';
                     card.ligthColor();
+                    cardImg.src = 'assets/img/clouds-day.png';
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Rain' && dataWeather.weather[0].icon.includes('d')){
-                    card.hideGreetingsMessage();
-                    card.hideError();
-                    cardImg.src = 'assets/img/rain.png';
                     card.ligthColor();
+                    cardImg.src = 'assets/img/rain.png';
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Snow' && dataWeather.weather[0].icon.includes('d')){
-                    card.hideGreetingsMessage();
-                    card.hideError();
-                    cardImg.src = 'assets/img/snow.png';
                     card.ligthColor();
+                    cardImg.src = 'assets/img/snow.png';
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Drizzle' && dataWeather.weather[0].icon.includes('d')){
-                    card.hideGreetingsMessage();
-                    card.hideError();
-                    cardImg.src = 'assets/img/rain.png';
                     card.ligthColor();
+                    cardImg.src = 'assets/img/rain.png';
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Mist' && dataWeather.weather[0].icon.includes('d')){
-                    card.hideGreetingsMessage();
-                    card.hideError();
-                    cardImg.src = 'assets/img/mist-day.png';
                     card.ligthColor();
+                    cardImg.src = 'assets/img/mist-day.png';
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Fog' && dataWeather.weather[0].icon.includes('d')){
-                    card.hideGreetingsMessage();
-                    card.hideError();
-                    cardImg.src = 'assets/img/mist-day.png';
                     card.ligthColor();
+                    cardImg.src = 'assets/img/mist-day.png';
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Clear' && dataWeather.weather[0].icon.includes('n')){
-                    card.hideGreetingsMessage();
-                    card.hideError();
-                    cardImg.src = 'assets/img/moon.png';
                     card.darkColor();
+                    cardImg.src = 'assets/img/moon.png';
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Clouds' && dataWeather.weather[0].icon.includes('n')){
-                    card.hideGreetingsMessage();
-                    card.hideError();
-                    cardImg.src = 'assets/img/clouds-night.png';
                     card.darkColor();
+                    cardImg.src = 'assets/img/clouds-night.png';
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Rain' && dataWeather.weather[0].icon.includes('n')){
-                    card.hideGreetingsMessage();
-                    card.hideError();
-                    cardImg.src = 'assets/img/rain.png';
                     card.darkColor();
+                    cardImg.src = 'assets/img/rain.png';
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Snow' && dataWeather.weather[0].icon.includes('n')){
-                    card.hideGreetingsMessage();
-                    card.hideError();
-                    cardImg.src = 'assets/img/snow.png';
                     card.darkColor();
+                    cardImg.src = 'assets/img/snow.png';
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Drizzle' && dataWeather.weather[0].icon.includes('n')){
-                    card.hideGreetingsMessage();
-                    card.hideError();
-                    cardImg.src = 'assets/img/rain.png';
                     card.darkColor();
+                    cardImg.src = 'assets/img/rain.png';
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Mist' && dataWeather.weather[0].icon.includes('n')){
-                    card.hideGreetingsMessage();
-                    card.hideError();
-                    cardImg.src = 'assets/img/mist-night.png';
                     card.darkColor();
+                    cardImg.src = 'assets/img/mist-night.png';
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Fog' && dataWeather.weather[0].icon.includes('n')){
-                    card.hideGreetingsMessage();
-                    card.hideError();
-                    cardImg.src = 'assets/img/mist-night.png';
                     card.darkColor();
+                    cardImg.src = 'assets/img/mist-night.png';
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }
