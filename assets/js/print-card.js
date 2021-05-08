@@ -3,121 +3,120 @@ function printCard(dataWeather, dataTimeZone){
     // change card content
     if(dataWeather.weather[0].main == 'Clear' && dataWeather.weather[0].icon.includes('d')){
         palanca = true;
-        cardInfo.hideGreetingsMessage();
-        cardInfo.hideError();
+        card.hideGreetingsMessage();
+        card.hideError();
         cardImg.src = 'assets/img/sun.png';
-        cardInfo.ligthColor();
-        cardInfo.cardInfo(dataWeather, dataTimeZone);
+        card.ligthColor();
+        card.cardInfo(dataWeather, dataTimeZone);
         
     }else if(dataWeather.weather[0].main == 'Clouds' && dataWeather.weather[0].icon.includes('d')){
         palanca = true;
-        cardInfo.hideGreetingsMessage();
-        cardInfo.hideError();
+        card.hideGreetingsMessage();
+        card.hideError();
         cardImg.src = 'assets/img/clouds-day.png';
-        cardInfo.ligthColor();
-        cardInfo.cardInfo(dataWeather, dataTimeZone);
+        card.ligthColor();
+        card.cardInfo(dataWeather, dataTimeZone);
 
     }else if(dataWeather.weather[0].main == 'Rain' && dataWeather.weather[0].icon.includes('d')){
         palanca = true;
-        cardInfo.hideGreetingsMessage();
-        cardInfo.hideError();
+        card.hideGreetingsMessage();
+        card.hideError();
         cardImg.src = 'assets/img/rain.png';
-        cardInfo.ligthColor();
-        cardInfo.cardInfo(dataWeather, dataTimeZone);
+        card.ligthColor();
+        card.cardInfo(dataWeather, dataTimeZone);
 
     }else if(dataWeather.weather[0].main == 'Snow' && dataWeather.weather[0].icon.includes('d')){
         palanca = true;
-        cardInfo.hideGreetingsMessage();
-        cardInfo.hideError();
+        card.hideGreetingsMessage();
+        card.hideError();
         cardImg.src = 'assets/img/snow.png';
-        cardInfo.ligthColor();
-        cardInfo.cardInfo(dataWeather, dataTimeZone);
+        card.ligthColor();
+        card.cardInfo(dataWeather, dataTimeZone);
 
     }else if(dataWeather.weather[0].main == 'Drizzle' && dataWeather.weather[0].icon.includes('d')){
         palanca = true;
-        cardInfo.hideGreetingsMessage();
-        cardInfo.hideError();
+        card.hideGreetingsMessage();
+        card.hideError();
         cardImg.src = 'assets/img/rain.png';
-        cardInfo.ligthColor();
-        cardInfo.cardInfo(dataWeather, dataTimeZone);
+        card.ligthColor();
+        card.cardInfo(dataWeather, dataTimeZone);
 
     }else if(dataWeather.weather[0].main == 'Mist' && dataWeather.weather[0].icon.includes('d')){
         palanca = true;
-        cardInfo.hideGreetingsMessage();
-        cardInfo.hideError();
+        card.hideGreetingsMessage();
+        card.hideError();
         cardImg.src = 'assets/img/mist-day.png';
-        cardInfo.ligthColor();
-        cardInfo.cardInfo(dataWeather, dataTimeZone);
+        card.ligthColor();
+        card.cardInfo(dataWeather, dataTimeZone);
 
     }else if(dataWeather.weather[0].main == 'Fog' && dataWeather.weather[0].icon.includes('d')){
         palanca = true;
-        cardInfo.hideGreetingsMessage();
-        cardInfo.hideError();
+        card.hideGreetingsMessage();
+        card.hideError();
         cardImg.src = 'assets/img/mist-day.png';
-        cardInfo.ligthColor();
-        cardInfo.cardInfo(dataWeather, dataTimeZone);
+        card.ligthColor();
+        card.cardInfo(dataWeather, dataTimeZone);
 
     }else if(dataWeather.weather[0].main == 'Clear' && dataWeather.weather[0].icon.includes('n')){
         palanca = true;
-        cardInfo.hideGreetingsMessage();
-        cardInfo.hideError();
+        card.hideGreetingsMessage();
+        card.hideError();
         cardImg.src = 'assets/img/moon.png';
-        cardInfo.darkColor();
-        cardInfo.cardInfo(dataWeather, dataTimeZone);
+        card.darkColor();
+        card.cardInfo(dataWeather, dataTimeZone);
 
     }else if(dataWeather.weather[0].main == 'Clouds' && dataWeather.weather[0].icon.includes('n')){
         palanca = true;
-        cardInfo.hideGreetingsMessage();
-        cardInfo.hideError();
+        card.hideGreetingsMessage();
+        card.hideError();
         cardImg.src = 'assets/img/clouds-night.png';
-        cardInfo.darkColor();
-        cardInfo.cardInfo(dataWeather, dataTimeZone);
+        card.darkColor();
+        card.cardInfo(dataWeather, dataTimeZone);
 
     }else if(dataWeather.weather[0].main == 'Rain' && dataWeather.weather[0].icon.includes('n')){
         palanca = true;
-        cardInfo.hideGreetingsMessage();
-        cardInfo.hideError();
+        card.hideGreetingsMessage();
+        card.hideError();
         cardImg.src = 'assets/img/rain.png';
-        cardInfo.darkColor();
-        cardInfo.cardInfo(dataWeather, dataTimeZone);
+        card.darkColor();
+        card.cardInfo(dataWeather, dataTimeZone);
 
     }else if(dataWeather.weather[0].main == 'Snow' && dataWeather.weather[0].icon.includes('n')){
         palanca = true;
-        cardInfo.hideGreetingsMessage();
-        cardInfo.hideError();
+        card.hideGreetingsMessage();
+        card.hideError();
         cardImg.src = 'assets/img/snow.png';
-        cardInfo.darkColor();
-        cardInfo.cardInfo(dataWeather, dataTimeZone);
+        card.darkColor();
+        card.cardInfo(dataWeather, dataTimeZone);
 
     }else if(dataWeather.weather[0].main == 'Drizzle' && dataWeather.weather[0].icon.includes('n')){
         palanca = true;
-        cardInfo.hideGreetingsMessage();
-        cardInfo.hideError();
+        card.hideGreetingsMessage();
+        card.hideError();
         cardImg.src = 'assets/img/rain.png';
-        cardInfo.darkColor();
-        cardInfo.cardInfo(dataWeather, dataTimeZone);
+        card.darkColor();
+        card.cardInfo(dataWeather, dataTimeZone);
 
     }else if(dataWeather.weather[0].main == 'Mist' && dataWeather.weather[0].icon.includes('n')){
         palanca = true;
-        cardInfo.hideGreetingsMessage();
-        cardInfo.hideError();
+        card.hideGreetingsMessage();
+        card.hideError();
         cardImg.src = 'assets/img/mist-night.png';
-        cardInfo.darkColor();
-        cardInfo.cardInfo(dataWeather, dataTimeZone);
+        card.darkColor();
+        card.cardInfo(dataWeather, dataTimeZone);
 
     }else if(dataWeather.weather[0].main == 'Fog' && dataWeather.weather[0].icon.includes('n')){
         palanca = true;
-        cardInfo.hideGreetingsMessage();
-        cardInfo.hideError();
+        card.hideGreetingsMessage();
+        card.hideError();
         cardImg.src = 'assets/img/mist-night.png';
-        cardInfo.darkColor();
-        cardInfo.cardInfo(dataWeather, dataTimeZone);
+        card.darkColor();
+        card.cardInfo(dataWeather, dataTimeZone);
 
     }
 
 }
-class CardInfo{
-    
+class Card{
     
     ligthColor(){
         document.documentElement.style.setProperty('--clr-primary', '#ffffff');
@@ -155,6 +154,43 @@ class CardInfo{
         document.documentElement.style.setProperty('--search-outline', '#808080');
     }
     
+    showError(dataWeather){
+        heroBot.style.opacity = 0;
+        cardGreetings.style.opacity = 0;
+        cardContent.style.opacity = 0;
+        cardTime.style.opacity = 0;
+        cardDay.style.opacity = 0;
+        cardError.style.opacity = 1;
+        cardError.innerHTML = `<h5>Error ${dataWeather.cod}</h5><p style="font-size: 14px">${dataWeather.message.charAt(0).toUpperCase() + dataWeather.message.slice(1)}</p>`
+    }
+    
+    hideError(){
+        heroBot.style.opacity = 1;
+        cardContent.style.opacity = 1;
+        cardTime.style.opacity = 1;
+        cardDay.style.opacity = 1;
+        cardError.style.opacity = 0;
+        cardError.innerHTML = ``
+    }
+                
+    hideGreetingsMessage(){
+        cardContent.style.opacity = 0;
+        cardTime.style.opacity = 0;
+        cardDay.style.opacity = 0;
+        cardGreetings.style.opacity = 0;
+        cardGreetingsText.style.opacity = 0;
+    }
+
+    hideInfo(){
+        cardTime.style.opacity = 0;
+        cardDay.style.opacity = 0;
+        cardContent.style.opacity = 0;
+        cardGreetings.style.opacity = 0;
+        cardError.style.opacity = 0;
+        cardImg.style.opacity = 0;
+        palanca = false;
+    }
+
     cardInfo(dataWeather, dataTimeZone){
     
         heroBot.style.opacity = 1;
@@ -211,43 +247,6 @@ class CardInfo{
     
         showTime();
     
-    }
-    
-    showError(dataWeather){
-        heroBot.style.opacity = 0;
-        cardGreetings.style.opacity = 0;
-        cardContent.style.opacity = 0;
-        cardTime.style.opacity = 0;
-        cardDay.style.opacity = 0;
-        cardError.style.opacity = 1;
-        cardError.innerHTML = `<h5>Error ${dataWeather.cod}</h5><p style="font-size: 14px">${dataWeather.message.charAt(0).toUpperCase() + dataWeather.message.slice(1)}</p>`
-    }
-    
-    hideError(){
-        heroBot.style.opacity = 1;
-        cardContent.style.opacity = 1;
-        cardTime.style.opacity = 1;
-        cardDay.style.opacity = 1;
-        cardError.style.opacity = 0;
-        cardError.innerHTML = ``
-    }
-    
-    hideCardInfo(){
-        cardTime.style.opacity = 0;
-        cardDay.style.opacity = 0;
-        cardContent.style.opacity = 0;
-        cardGreetings.style.opacity = 0;
-        cardError.style.opacity = 0;
-        cardImg.style.opacity = 0;
-        palanca = false;
-    }
-            
-    hideGreetingsMessage(){
-        cardContent.style.opacity = 0;
-        cardTime.style.opacity = 0;
-        cardDay.style.opacity = 0;
-        cardGreetings.style.opacity = 0;
-        cardGreetingsText.style.opacity = 0;
     }
 
 }

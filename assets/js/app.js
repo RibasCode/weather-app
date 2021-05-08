@@ -22,7 +22,7 @@ const cardGreetings = document.getElementById('card__greetings');
 const cardError = document.getElementById('card__error');
 const heroBot = document.getElementById('hero__bot');
 
-const cardInfo = new CardInfo()
+const card = new Card()
 const ft = new Fetch()
 let palanca = true;
 
@@ -45,7 +45,7 @@ input.addEventListener("keyup", function(event) {
 citySearchBtn.addEventListener('click', () => {
     
     // Transition "Data load" fase1
-    cardInfo.hideCardInfo()
+    card.hideInfo()
 
     // el then((data)) esta retornant la data perque es pugui fer servir dins de la callback
     ft.getDataWeather().then((dataWeather) => {
@@ -53,7 +53,7 @@ citySearchBtn.addEventListener('click', () => {
         console.log(dataWeather);
 
         if(dataWeather.cod == '404' || dataWeather.cod == '400'){
-            cardInfo.showError(dataWeather);
+            card.showError(dataWeather);
 
         }
 
