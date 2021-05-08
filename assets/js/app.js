@@ -5,6 +5,7 @@
 // --------------------------------------------------------------
 // variable
 // --------------------------------------------------------------
+
 const citySearchBtn = document.getElementById('city-search-btn');
 const cardCity = document.getElementById('card__city');
 const cardWeather = document.getElementById('card__weather');
@@ -23,11 +24,12 @@ const cardError = document.getElementById('card__error');
 const heroBot = document.getElementById('hero__bot');
 
 const card = new Card()
-const ft = new Fetch()
+const fetchRequest = new Fetch()
+
 let palanca = true;
 
 // --------------------------------------------------------------
-// press enter key
+// press enter key functionality
 // --------------------------------------------------------------
 
 var input = document.getElementById("city-input");
@@ -48,7 +50,7 @@ citySearchBtn.addEventListener('click', () => {
     card.hideInfo()
 
     // el then((data)) esta retornant la data perque es pugui fer servir dins de la callback
-    ft.getDataWeather().then((dataWeather) => {
+    fetchRequest.getDataWeather().then((dataWeather) => {
 
         console.log(dataWeather);
 
@@ -57,15 +59,16 @@ citySearchBtn.addEventListener('click', () => {
 
         }
 
-        ft.getDataTimezone(dataWeather).then((dataTimeZone) => {
+        fetchRequest.getDataTimezone(dataWeather).then((dataTimeZone) => {
 
             console.log(dataTimeZone)
 
             setTimeout(function(){
 
+                palanca = true;
+
                 // change card content depending on weather
                 if(dataWeather.weather[0].main == 'Clear' && dataWeather.weather[0].icon.includes('d')){
-                    palanca = true;
                     card.hideGreetingsMessage();
                     card.hideError();
                     cardImg.src = 'assets/img/sun.png';
@@ -73,7 +76,6 @@ citySearchBtn.addEventListener('click', () => {
                     card.cardInfo(dataWeather, dataTimeZone);
                     
                 }else if(dataWeather.weather[0].main == 'Clouds' && dataWeather.weather[0].icon.includes('d')){
-                    palanca = true;
                     card.hideGreetingsMessage();
                     card.hideError();
                     cardImg.src = 'assets/img/clouds-day.png';
@@ -81,7 +83,6 @@ citySearchBtn.addEventListener('click', () => {
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Rain' && dataWeather.weather[0].icon.includes('d')){
-                    palanca = true;
                     card.hideGreetingsMessage();
                     card.hideError();
                     cardImg.src = 'assets/img/rain.png';
@@ -89,7 +90,6 @@ citySearchBtn.addEventListener('click', () => {
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Snow' && dataWeather.weather[0].icon.includes('d')){
-                    palanca = true;
                     card.hideGreetingsMessage();
                     card.hideError();
                     cardImg.src = 'assets/img/snow.png';
@@ -97,7 +97,6 @@ citySearchBtn.addEventListener('click', () => {
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Drizzle' && dataWeather.weather[0].icon.includes('d')){
-                    palanca = true;
                     card.hideGreetingsMessage();
                     card.hideError();
                     cardImg.src = 'assets/img/rain.png';
@@ -105,7 +104,6 @@ citySearchBtn.addEventListener('click', () => {
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Mist' && dataWeather.weather[0].icon.includes('d')){
-                    palanca = true;
                     card.hideGreetingsMessage();
                     card.hideError();
                     cardImg.src = 'assets/img/mist-day.png';
@@ -113,7 +111,6 @@ citySearchBtn.addEventListener('click', () => {
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Fog' && dataWeather.weather[0].icon.includes('d')){
-                    palanca = true;
                     card.hideGreetingsMessage();
                     card.hideError();
                     cardImg.src = 'assets/img/mist-day.png';
@@ -121,7 +118,6 @@ citySearchBtn.addEventListener('click', () => {
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Clear' && dataWeather.weather[0].icon.includes('n')){
-                    palanca = true;
                     card.hideGreetingsMessage();
                     card.hideError();
                     cardImg.src = 'assets/img/moon.png';
@@ -129,7 +125,6 @@ citySearchBtn.addEventListener('click', () => {
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Clouds' && dataWeather.weather[0].icon.includes('n')){
-                    palanca = true;
                     card.hideGreetingsMessage();
                     card.hideError();
                     cardImg.src = 'assets/img/clouds-night.png';
@@ -137,7 +132,6 @@ citySearchBtn.addEventListener('click', () => {
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Rain' && dataWeather.weather[0].icon.includes('n')){
-                    palanca = true;
                     card.hideGreetingsMessage();
                     card.hideError();
                     cardImg.src = 'assets/img/rain.png';
@@ -145,7 +139,6 @@ citySearchBtn.addEventListener('click', () => {
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Snow' && dataWeather.weather[0].icon.includes('n')){
-                    palanca = true;
                     card.hideGreetingsMessage();
                     card.hideError();
                     cardImg.src = 'assets/img/snow.png';
@@ -153,7 +146,6 @@ citySearchBtn.addEventListener('click', () => {
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Drizzle' && dataWeather.weather[0].icon.includes('n')){
-                    palanca = true;
                     card.hideGreetingsMessage();
                     card.hideError();
                     cardImg.src = 'assets/img/rain.png';
@@ -161,7 +153,6 @@ citySearchBtn.addEventListener('click', () => {
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Mist' && dataWeather.weather[0].icon.includes('n')){
-                    palanca = true;
                     card.hideGreetingsMessage();
                     card.hideError();
                     cardImg.src = 'assets/img/mist-night.png';
@@ -169,7 +160,6 @@ citySearchBtn.addEventListener('click', () => {
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Fog' && dataWeather.weather[0].icon.includes('n')){
-                    palanca = true;
                     card.hideGreetingsMessage();
                     card.hideError();
                     cardImg.src = 'assets/img/mist-night.png';
