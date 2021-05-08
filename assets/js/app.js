@@ -51,7 +51,7 @@ citySearchBtn.addEventListener('click', () => {
     // Transition "Data load" fase1
     card.hideInfo()
 
-    // el then((data)) esta retornant la data perque es pugui fer servir dins de la callback
+    // el then((data)) "despres de que arrivi la info amb el fetch, then pasa la data a la arrow function"
     fetchRequest.getDataWeather().then((dataWeather) => {
 
         console.log(dataWeather);
