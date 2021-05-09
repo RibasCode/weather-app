@@ -297,6 +297,14 @@ function hideGreetingsMessage(){
                         ligthColor();
                         printCard(data, dataTimeZone);
 
+                    }else if(data.weather[0].main == 'Haze' && data.weather[0].icon.includes('d')){
+                        palanca = true;
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = 'assets/img/mist-day.png';
+                        ligthColor();
+                        printCard(data, dataTimeZone);
+
                     }else if(data.weather[0].main == 'Clear' && data.weather[0].icon.includes('n')){
                         palanca = true;
                         hideGreetingsMessage();
@@ -346,6 +354,14 @@ function hideGreetingsMessage(){
                         printCard(data, dataTimeZone);
 
                     }else if(data.weather[0].main == 'Fog' && data.weather[0].icon.includes('n')){
+                        palanca = true;
+                        hideGreetingsMessage();
+                        hideError();
+                        cardImg.src = 'assets/img/mist-night.png';
+                        darkColor();
+                        printCard(data, dataTimeZone);
+
+                    }else if(data.weather[0].main == 'Haze' && data.weather[0].icon.includes('n')){
                         palanca = true;
                         hideGreetingsMessage();
                         hideError();

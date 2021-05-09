@@ -106,6 +106,11 @@ citySearchBtn.addEventListener('click', () => {
                     card.ligthColor();
                     cardImg.src = 'assets/img/mist-day.png';
                     card.cardInfo(dataWeather, dataTimeZone);
+
+                }else if(dataWeather.weather[0].main == 'Haze' && dataWeather.weather[0].icon.includes('d')){
+                    card.ligthColor();
+                    cardImg.src = 'assets/img/mist-day.png';
+                    card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Clear' && dataWeather.weather[0].icon.includes('n')){
                     card.darkColor();
@@ -138,6 +143,11 @@ citySearchBtn.addEventListener('click', () => {
                     card.cardInfo(dataWeather, dataTimeZone);
             
                 }else if(dataWeather.weather[0].main == 'Fog' && dataWeather.weather[0].icon.includes('n')){
+                    card.darkColor();
+                    cardImg.src = 'assets/img/mist-night.png';
+                    card.cardInfo(dataWeather, dataTimeZone);
+            
+                }else if(dataWeather.weather[0].main == 'Haze' && dataWeather.weather[0].icon.includes('n')){
                     card.darkColor();
                     cardImg.src = 'assets/img/mist-night.png';
                     card.cardInfo(dataWeather, dataTimeZone);
