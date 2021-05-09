@@ -11,7 +11,7 @@ class Fetch{
         // API request
         const respuesta = await fetch(
             `${proxy}api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${key}&units=metric`
-        );
+        )
 
         // const respuesta = await fetch(
         //     `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${key}&units=metric`
