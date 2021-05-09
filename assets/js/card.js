@@ -119,7 +119,7 @@ class Card{
     
             var time = h + " : " + m + " : " + s;
             document.getElementById("card__time").innerText = time;
-            document.getElementById("card__time").textContent = time;
+            // document.getElementById("card__time").textContent = time;
     
             s++
     
