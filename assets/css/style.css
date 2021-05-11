@@ -252,6 +252,13 @@ main{
     transition: all var(--transition-time) var(--transition-ease);
 }
 
+#city-input:focus ~ #city-search-btn,
+#city-input:hover ~ #city-search-btn{
+    border: solid 1px var(--search-outline);
+    border-left: none;
+    box-shadow: 0 0 25px var(--clr-shadow-hover);
+}
+
 #city-search-btn{
     position: absolute;
     height: 64px;
@@ -266,7 +273,6 @@ main{
     transition: all var(--transition-time) var(--transition-ease);
 }
 
-
 #city-input:focus,
 #city-input:hover,
 #city-search-btn:focus,
@@ -275,17 +281,17 @@ main{
     box-shadow: 0 0 25px var(--clr-shadow-hover);
 }
 
+#city-search-btn:focus,
+#city-search-btn:hover{
+    border: solid 1px var(--search-outline);
+    border-left: none;
+    box-shadow: 0 0 25px var(--clr-shadow-hover);
+}
+
 #city-search-btn:hover svg,
 #city-search-btn:focus svg{
     animation: search-btn-animation 0.4s;
     animation-fill-mode: forwards;
-}
-
-#city-input:focus ~ #city-search-btn,
-#city-input:hover ~ #city-search-btn{
-    border: solid 1px var(--search-outline);
-    border-left: none;
-    box-shadow: 0 0 25px var(--clr-shadow-hover);
 }
 
 @keyframes search-btn-animation {
@@ -319,19 +325,12 @@ main{
     margin-right: 3px;
 }
 
-
-
-#city-search-btn:hover{
-    border-left: none;
-}
-
 /*--------------------------------------------------------------
     <section> - hero__card
 --------------------------------------------------------------*/
 
 .hero__card{
     z-index: 100;
-
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -381,29 +380,22 @@ main{
 
 .card__arrow {
     z-index: 1;
-
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     padding: 15px 15px 35px 20px;
-
     transition: all 0.2s ease-in-out;
 }
 
 .arrow__line {
     display: block;
     transform: rotate(45deg);
-
     width: 12.5px;
     height: 12.5px;
-
     margin: 0px;
-
     border-bottom: 2px solid var(--clr-typo);
     border-right: 2px solid var(--clr-typo);
-
     animation: arrow 1.8s infinite ease-in-out;
 }
 
@@ -429,12 +421,12 @@ main{
 }
 
 @keyframes world-animation {
-0%{
-transform: rotate(0deg);
-}
-100%{
-    transform: rotate(360deg);
-}
+    0%{
+    transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 #card__error{
@@ -457,7 +449,6 @@ transform: rotate(0deg);
 .card__top{
     text-align: center;
     display: flex;
-
     justify-content: space-between;
     width: 100%;
     height: 75%;
