@@ -275,15 +275,17 @@ main{
     box-shadow: 0 0 25px var(--clr-shadow-hover);
 }
 
-#city-search-btn:focus,
-#city-search-btn:hover{
-    border-left: none;
-}
-
 #city-search-btn:hover svg,
 #city-search-btn:focus svg{
     animation: search-btn-animation 0.4s;
     animation-fill-mode: forwards;
+}
+
+#city-input:focus ~ #city-search-btn,
+#city-input:hover ~ #city-search-btn{
+    border: solid 1px var(--search-outline);
+    border-left: none;
+    box-shadow: 0 0 25px var(--clr-shadow-hover);
 }
 
 @keyframes search-btn-animation {
